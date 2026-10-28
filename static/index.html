@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="uz" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Quiz Telegram Mini App</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    },
+                    colors: {
+                        darkbg: '#090d16',
+                        cardbg: '#111827',
+                        accentblue: '#3b82f6',
+                        accentglow: '#60a5fa'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Chart.js for Visual Statistics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Canvas Confetti for celebrations -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <!-- Telegram WebApp SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body class="bg-darkbg text-slate-100 min-h-screen flex flex-col antialiased pb-24 font-sans select-none">
+
+    <!-- Standalone Dev Banner (Browser test mode) -->
+    <div id="dev-banner" class="hidden bg-gradient-to-r from-blue-950 via-indigo-950 to-slate-900 border-b border-blue-800/40 px-4 py-2 text-xs flex items-center justify-between shadow-lg">
+        <span class="flex items-center gap-2 font-medium text-blue-200">
+            <span class="text-base">⚡</span>
+            <span>Test/Browser rejimi:</span>
+            <span id="dev-role-label" class="font-bold text-white bg-blue-600/30 px-2.5 py-0.5 rounded-full border border-blue-500/40">👤 Talaba</span>
+        </span>
+        <div class="flex items-center gap-1.5">
+            <button onclick="TG.setMockRole(false)" class="px-2.5 py-1 rounded-xl bg-blue-700/60 hover:bg-blue-600 text-white font-semibold transition active:scale-95">👤 Talaba</button>
+            <button onclick="TG.setMockRole(true)" class="px-2.5 py-1 rounded-xl bg-amber-600 hover:bg-amber-500 text-white font-bold transition active:scale-95 shadow-md">🛡️ Admin</button>
+        </div>
+    </div>
+
+    <!-- MAIN APP CONTAINER -->
+    <div id="main-app-container" class="flex-1 flex flex-col w-full max-w-lg mx-auto px-4 pt-3">
+
+        <!-- Header: Profile & Status -->
+        <header class="flex items-center justify-between py-2 border-b border-slate-800/60 mb-3.5">
+            <div class="flex items-center space-x-3">
+                <div class="relative">
+                    <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-500 to-cyan-400 p-[2px] shadow-lg shadow-blue-500/20">
+                        <div class="w-full h-full bg-slate-900 rounded-[14px] flex items-center justify-center text-xl">
+                            🎓
+                        </div>
+                    </div>
+                    <span class="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 border-2 border-darkbg rounded-full flex items-center justify-center text-[8px] text-white font-bold">✓</span>
+                </div>
+                <div>
+                    <div class="flex items-center gap-1.5">
+                        <h2 id="header-user-name" class="font-bold text-sm text-white tracking-tight">Foydalanuvchi</h2>
+                        <span class="text-xs">✨</span>
+                    </div>
+                    <p id="header-username-tag" class="text-xs text-blue-400 font-mono font-medium">@username</p>
+                </div>
+            </div>
+            <div>
+                <button onclick="App.openSubscriptionModal()" class="px-3 py-1.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700 border border-slate-700/80 text-xs font-semibold text-slate-200 flex items-center gap-1.5 transition active:scale-95 shadow-sm">
+                    <span>⚙️</span>
+                    <span>Profil</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Subscribed Faculty Code Banner -->
+        <div class="mb-4">
+            <div id="user-subscribed-badge" class="hidden p-4 rounded-3xl bg-gradient-to-r from-blue-950/60 via-indigo-950/40 to-slate-900 border border-blue-500/30 flex items-center justify-between shadow-xl shadow-blue-950/20">
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs text-blue-300 font-medium">📍 Oqim guruhingiz:</span>
+                        <span id="subscribed-code-label" class="px-2.5 py-0.5 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-mono font-extrabold shadow-md">KOD</span>
+                    </div>
+                    <p id="subscribed-faculty-detail" class="text-xs text-slate-400 font-medium">TATU • Dasturiy injiniring</p>
+                </div>
+                <button onclick="App.openSubscriptionModal()" class="px-3 py-1.5 rounded-xl bg-blue-600/20 hover:bg-blue-600/30 text-blue-300 border border-blue-500/30 text-xs font-bold flex items-center gap-1 transition active:scale-95">
+                    <span>✏️</span>
+                    <span>Almashtirish</span>
+                </button>
+            </div>
+
+            <div id="user-no-code-prompt" class="p-4 rounded-3xl bg-slate-900/90 border border-slate-800 flex items-center justify-between shadow-lg">
+                <div class="space-y-0.5">
+                    <div class="flex items-center gap-1.5">
+                        <span class="text-base">🏷️</span>
+                        <h4 class="font-bold text-xs text-white">Guruh kodi kiritilmagan</h4>
+                    </div>
+                    <p class="text-xs text-slate-400 pl-6">O'z fakultetingiz testlarini ko'rish uchun kod kiriting</p>
+                </div>
+                <button onclick="App.openSubscriptionModal()" class="px-3.5 py-2 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-bold transition shadow-md shadow-blue-600/30 active:scale-95">
+                    + Kod kiritish 🎯
+                </button>
+            </div>
+        </div>
+
+        <!-- ==================== VIEW: HOME (ASOSIY) ==================== -->
+        <main id="view-home" class="tab-view space-y-4">
+            <!-- Quick PIN/Code Search Input -->
+            <div class="p-3 rounded-2xl bg-slate-900/80 border border-slate-800 flex items-center space-x-2.5 shadow-lg">
+                <span class="text-base text-slate-400 pl-1">🔍</span>
+                <input id="input-quick-code" type="text" placeholder="Unikal test kodini kiriting (TATU-CS-200)"
+                       class="flex-1 bg-transparent text-xs text-white placeholder-slate-500 outline-none uppercase font-mono font-semibold">
+                <button id="btn-quick-join" class="px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs transition active:scale-95 shadow-md shadow-blue-600/30 flex items-center gap-1">
+                    <span>Ochish</span>
+                    <span>🎯</span>
+                </button>
+            </div>
+
+            <!-- List Header with Search Filter -->
+            <div class="flex items-center justify-between pt-1">
+                <div class="flex items-center gap-2">
+                    <span class="text-base">🔥</span>
+                    <h3 class="font-extrabold text-sm text-white tracking-tight">Faol Testlar Bazasi</h3>
+                </div>
+                <input id="search-quizzes-input" type="text" placeholder="Qidirish..."
+                       class="w-36 px-3 py-1.5 rounded-xl bg-slate-900/90 border border-slate-800 text-xs text-slate-200 placeholder-slate-500 focus:border-blue-500 focus:outline-none transition">
+            </div>
+
+            <!-- Quizzes List Container -->
+            <div id="quizzes-list-container" class="space-y-3.5 pb-6">
+                <!-- Dynamically populated by app.js -->
+            </div>
+        </main>
+
+        <!-- ==================== VIEW: CREATE / JSON UPLOAD ==================== -->
+        <main id="view-create" class="tab-view hidden space-y-4 pb-8">
+            <div class="p-5 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-4 shadow-xl">
+                <div class="border-b border-slate-800 pb-3 flex items-center justify-between">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xl">📁</span>
+                            <h3 class="font-extrabold text-base text-white tracking-tight">.JSON Formatda Quiz Yuklash</h3>
+                        </div>
+                        <p class="text-xs text-slate-400 mt-0.5">200+ talik savollar avtomatik 25 talik bo'limlarga ajratiladi</p>
+                    </div>
+                    <span class="text-2xl float-bob">🚀</span>
+                </div>
+
+                <!-- Rule Badge -->
+                <div class="p-3.5 rounded-2xl bg-gradient-to-r from-blue-950/60 to-indigo-950/40 border border-blue-500/30 flex items-start space-x-3 text-xs text-blue-200">
+                    <span class="text-xl">💡</span>
+                    <div class="space-y-0.5">
+                        <b class="text-blue-300 font-bold">Muhim Qoida:</b>
+                        <p class="text-[11px] leading-relaxed">JSON faylingizda to'g'ri javob doim <b>"a" variantda</b> bo'lishi kerak. Tizim talaba test yechayotganda variantlar o'rnini avtomatik aralashtirib beradi.</p>
+                    </div>
+                </div>
+
+                <!-- Drag & Drop File Upload Box -->
+                <div class="border-2 border-dashed border-blue-500/40 hover:border-blue-400 rounded-3xl p-6 text-center transition cursor-pointer bg-slate-950/50 hover:bg-blue-950/20 active:scale-99"
+                     onclick="document.getElementById('json-file-input').click()">
+                    <input id="json-file-input" type="file" accept=".json" class="hidden"
+                           onchange="App.handleJsonFileSelect(this)">
+                    <div class="text-4xl mb-2 float-bob">📄</div>
+                    <p class="text-xs font-bold text-white tracking-wide">.json formatidagi faylni tanlang</p>
+                    <p class="text-[11px] text-slate-400 mt-1">yoki faylni shu yerga tortib tashlang</p>
+                    <span class="mt-2.5 inline-block px-3 py-1 rounded-full bg-blue-600/20 text-blue-300 text-[11px] font-bold border border-blue-500/30">
+                        ⚡ 200+ talik bazani qo'llab-quvvatlaydi
+                    </span>
+                </div>
+
+                <!-- Uploaded File Info Preview -->
+                <div id="json-file-info" class="hidden p-4 rounded-2xl bg-emerald-950/30 border border-emerald-500/40 flex items-center justify-between shadow-lg">
+                    <div class="space-y-0.5">
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-sm">📄</span>
+                            <h5 id="json-file-name" class="font-bold text-xs text-white">questions.json</h5>
+                        </div>
+                        <p id="json-file-stats" class="text-xs text-emerald-400 font-semibold pl-5">200 ta savol • 8 ta 25 talik bo'lim</p>
+                    </div>
+                    <span class="px-2.5 py-1 rounded-xl bg-emerald-500/20 text-emerald-300 font-bold text-xs border border-emerald-500/30">
+                        ✓ Qabul qilindi
+                    </span>
+                </div>
+
+                <!-- Quiz Meta Fields -->
+                <div class="space-y-3 pt-2">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1 flex items-center gap-1">
+                            <span>📝</span>
+                            <span>Fan / Quiz Nomi</span>
+                        </label>
+                        <input id="create-title" type="text" placeholder="Masalan: Dasturlash asoslari va Algoritmlar"
+                               class="w-full px-3.5 py-2.5 rounded-2xl bg-slate-950 border border-slate-800 text-xs text-white focus:border-blue-500 focus:outline-none transition font-medium">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">🏛️ Universitet</label>
+                            <input id="create-university" type="text" placeholder="TATU"
+                                   class="w-full px-3.5 py-2.5 rounded-2xl bg-slate-950 border border-slate-800 text-xs text-white focus:border-blue-500 focus:outline-none"
+                                   oninput="App.generateRandomCode()">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">📚 Fakultet</label>
+                            <input id="create-faculty" type="text" placeholder="Dasturiy injiniring"
+                                   class="w-full px-3.5 py-2.5 rounded-2xl bg-slate-950 border border-slate-800 text-xs text-white focus:border-blue-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">🎯 Yo'nalish</label>
+                            <input id="create-direction" type="text" placeholder="Kompyuter ilmlari"
+                                   class="w-full px-3.5 py-2.5 rounded-2xl bg-slate-950 border border-slate-800 text-xs text-white focus:border-blue-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">📅 Kurs</label>
+                            <select id="create-course" class="w-full px-3.5 py-2.5 rounded-2xl bg-slate-950 border border-slate-800 text-xs text-white focus:border-blue-500 focus:outline-none">
+                                <option value="1-kurs">1-kurs</option>
+                                <option value="2-kurs" selected>2-kurs</option>
+                                <option value="3-kurs">3-kurs</option>
+                                <option value="4-kurs">4-kurs</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-300 mb-1 flex items-center justify-between">
+                            <span class="flex items-center gap-1">
+                                <span>🔑</span>
+                                <span>Unikal Kod (Talabalar topishi uchun)</span>
+                            </span>
+                            <span class="text-[11px] text-blue-400">Doimiy biriktiriladi</span>
+                        </label>
+                        <div class="flex space-x-2">
+                            <input id="create-unique-code" type="text" placeholder="TATU-CS-200"
+                                   class="flex-1 px-3.5 py-2.5 rounded-2xl bg-slate-950 border border-slate-800 text-xs font-mono font-bold text-blue-400 uppercase focus:border-blue-500 focus:outline-none">
+                            <button type="button" onclick="App.generateRandomCode()" class="px-3.5 py-2.5 rounded-2xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-300 flex items-center gap-1 transition">
+                                <span>🎲</span>
+                                <span>Generatsiya</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="hidden">
+                        <input id="create-desc" type="text" value="25 talik bo'limlarga ajratilgan to'liq testlar bazasi">
+                        <input id="create-time-limit" type="number" value="30">
+                    </div>
+                </div>
+
+                <button id="create-submit-btn" type="button" onclick="App.submitCreateQuiz()"
+                        class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 hover:opacity-95 text-white font-extrabold text-xs transition shadow-xl shadow-blue-600/30 active:scale-98 flex items-center justify-center gap-2">
+                    <span>Quizni saqlash va 25 talik bo'limlarga ajratish</span>
+                    <span>🚀</span>
+                </button>
+            </div>
+        </main>
+
+        <!-- ==================== VIEW: VISUAL STATS ==================== -->
+        <main id="view-stats" class="tab-view hidden space-y-4 pb-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">📊</span>
+                    <h3 class="font-extrabold text-base text-white tracking-tight">Mening Statistikam</h3>
+                </div>
+                <span class="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 font-bold border border-blue-500/20">
+                    Jonli Analitika ⚡
+                </span>
+            </div>
+
+            <!-- 4 Quick Metric Cards -->
+            <div class="grid grid-cols-2 gap-3">
+                <div class="p-4 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-lg space-y-1">
+                    <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                        <span>📝</span>
+                        <span>Yechilgan testlar</span>
+                    </span>
+                    <h4 id="stat-total-attempts" class="text-2xl font-black text-white">0</h4>
+                </div>
+                <div class="p-4 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-lg space-y-1">
+                    <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                        <span>🎯</span>
+                        <span>O'rtacha natija</span>
+                    </span>
+                    <h4 id="stat-avg-percentage" class="text-2xl font-black text-blue-400">0%</h4>
+                </div>
+                <div class="p-4 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-lg space-y-1">
+                    <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                        <span>✅</span>
+                        <span>Jami to'g'ri javob</span>
+                    </span>
+                    <h4 id="stat-total-correct" class="text-2xl font-black text-emerald-400">0</h4>
+                </div>
+                <div class="p-4 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-lg space-y-1">
+                    <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                        <span>🏆</span>
+                        <span>Eng yuqori ball</span>
+                    </span>
+                    <h4 id="stat-highest-score" class="text-2xl font-black text-amber-400">0%</h4>
+                </div>
+            </div>
+
+            <!-- Visual Diagram 1: Doughnut Chart -->
+            <div class="p-5 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-3 shadow-xl">
+                <div class="flex items-center justify-between">
+                    <h4 class="font-bold text-xs text-slate-200 flex items-center gap-1.5">
+                        <span>🎯</span>
+                        <span>To'g'ri va Noto'g'ri javoblar sifati</span>
+                    </h4>
+                    <span class="text-[11px] text-slate-400 font-medium">Doiraviy</span>
+                </div>
+                <div class="h-48 relative flex items-center justify-center">
+                    <canvas id="stats-pie-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Visual Diagram 2: Bar Chart -->
+            <div class="p-5 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-3 shadow-xl">
+                <div class="flex items-center justify-between">
+                    <h4 class="font-bold text-xs text-slate-200 flex items-center gap-1.5">
+                        <span>📈</span>
+                        <span>Oxirgi testlar dinamikasi (Ballar %)</span>
+                    </h4>
+                    <span class="text-[11px] text-slate-400 font-medium">Progress</span>
+                </div>
+                <div class="h-44 relative">
+                    <canvas id="stats-bar-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- History of attempts -->
+            <div class="space-y-3">
+                <h4 class="font-bold text-sm text-slate-200 flex items-center gap-1.5">
+                    <span>🕒</span>
+                    <span>Topshirilgan testlar tarixi</span>
+                </h4>
+                <div id="stats-history-container" class="space-y-2.5"></div>
+            </div>
+        </main>
+
+        <!-- ==================== VIEW: MY CREATED QUIZZES ==================== -->
+        <main id="view-myquizzes" class="tab-view hidden space-y-4 pb-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">📑</span>
+                    <h3 class="font-extrabold text-base text-white tracking-tight">Mening Yuklagan Testlarim</h3>
+                </div>
+                <button onclick="App.switchTab('create')" class="px-3.5 py-1.5 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xs transition active:scale-95 shadow-md">
+                    + .json yuklash 🚀
+                </button>
+            </div>
+            <div id="myquizzes-list-container" class="space-y-3.5"></div>
+        </main>
+
+        <!-- ==================== VIEW: ADMIN PANEL ==================== -->
+        <main id="view-admin" class="tab-view hidden space-y-4 pb-8">
+            <div class="p-5 rounded-3xl bg-gradient-to-r from-indigo-950/80 via-blue-950/60 to-slate-900 border border-indigo-700/50 flex items-center justify-between shadow-2xl">
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xl">👑</span>
+                        <h3 class="font-black text-base text-white tracking-tight">Super Admin Paneli</h3>
+                    </div>
+                    <p class="text-xs text-indigo-300 font-medium">Barcha bot foydalanuvchilari (@username bilan)</p>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="AdminPanel.lockAdmin()" class="px-2.5 py-2 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-extrabold text-xs flex items-center gap-1 transition active:scale-95 border border-slate-700">
+                        <span>🔒</span>
+                        <span>Qulflash</span>
+                    </button>
+                    <button onclick="AdminPanel.openBroadcastModal()" class="px-3 py-2 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs shadow-lg shadow-blue-600/30 flex items-center gap-1 transition active:scale-95">
+                        <span>📢</span>
+                        <span>Xabar tarqatish</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Admin Stats Cards -->
+            <div class="grid grid-cols-2 gap-3">
+                <div class="p-4 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-lg space-y-1">
+                    <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                        <span>👥</span>
+                        <span>Jami bot a'zolari</span>
+                    </span>
+                    <div class="flex items-baseline gap-2 mt-1">
+                        <h4 id="adm-total-users" class="text-2xl font-black text-white">0</h4>
+                        <span id="adm-users-today" class="text-xs text-emerald-400 font-bold bg-emerald-500/10 px-2 py-0.5 rounded-full">+0 bugun</span>
+                    </div>
+                </div>
+                <div class="p-4 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-lg space-y-1">
+                    <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                        <span>📦</span>
+                        <span>Jami Quizlar</span>
+                    </span>
+                    <h4 id="adm-total-quizzes" class="text-2xl font-black text-blue-400 mt-1">0</h4>
+                </div>
+                <div class="p-4 rounded-3xl bg-slate-900/90 border border-slate-800 col-span-2 shadow-lg space-y-1">
+                    <span class="text-xs text-slate-400 font-medium flex items-center gap-1">
+                        <span>🎯</span>
+                        <span>Jami Topshirilgan Testlar</span>
+                    </span>
+                    <h4 id="adm-total-attempts" class="text-2xl font-black text-indigo-400 mt-1">0</h4>
+                </div>
+            </div>
+
+            <!-- Top Faculties -->
+            <div class="p-5 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-2.5 shadow-xl">
+                <h4 class="font-bold text-xs text-slate-200 flex items-center gap-1.5">
+                    <span>🏛️</span>
+                    <span>Faol Universitet va Fakultetlar</span>
+                </h4>
+                <div id="adm-top-faculties" class="space-y-2"></div>
+            </div>
+
+            <!-- Leaderboard (Top Talabalar) -->
+            <div class="p-5 rounded-3xl bg-slate-900/90 border border-slate-800 space-y-2.5 shadow-xl">
+                <h4 class="font-bold text-xs text-slate-200 flex items-center gap-1.5">
+                    <span>🏆</span>
+                    <span>Talabalar Reytingi (Top 10)</span>
+                </h4>
+                <div id="adm-leaderboard-list" class="space-y-2"></div>
+            </div>
+
+            <!-- User list with @username and profile links -->
+            <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                    <h4 class="font-extrabold text-sm text-slate-200 flex items-center gap-1.5">
+                        <span>👤</span>
+                        <span>Bot Foydalanuvchilari (@username bilan)</span>
+                    </h4>
+                    <input id="adm-search-input" type="text" placeholder="Ism yoki username..."
+                           class="w-40 px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-800 text-xs text-slate-200 focus:outline-none focus:border-blue-500"
+                           oninput="AdminPanel.loadUsers(this.value)">
+                </div>
+                <div id="adm-users-list" class="space-y-2.5"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- ==================== MODAL: 25-QUESTION PARTS SELECTOR ==================== -->
+    <div id="modal-quiz-parts" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4">
+        <div class="w-full max-w-md rounded-3xl bg-slate-900 border border-slate-700/80 p-5 space-y-4 shadow-2xl max-h-[85vh] flex flex-col">
+            <div class="flex items-start justify-between border-b border-slate-800 pb-3">
+                <div class="space-y-1">
+                    <span id="parts-modal-code" class="px-2.5 py-0.5 rounded-xl bg-blue-600/20 text-blue-400 font-mono font-extrabold text-xs border border-blue-500/30">KOD</span>
+                    <h3 id="parts-modal-title" class="font-extrabold text-base text-white mt-1">Quiz Nomi</h3>
+                    <p id="parts-modal-stats" class="text-xs text-slate-400">200 ta savol • 8 ta bo'lim</p>
+                </div>
+                <button onclick="QuizPlayer.closePartsModal()" class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:text-white font-bold text-sm">✕</button>
+            </div>
+
+            <div class="text-xs text-blue-300 bg-blue-600/10 p-3 rounded-2xl border border-blue-500/30 flex items-center gap-2">
+                <span class="text-base">👇</span>
+                <span>Qaysi 25 talik bo'limni yechmoqchisiz? Tanlang:</span>
+            </div>
+
+            <div id="parts-list-container" class="space-y-2.5 overflow-y-auto flex-1 pr-1">
+                <!-- Dynamically populated by quiz.js -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== CONTINUOUS SCROLL QUIZ FEED CONTAINER ==================== -->
+    <div id="quiz-scroll-container" class="hidden fixed inset-0 bg-darkbg z-50 flex flex-col max-w-lg mx-auto">
+        <!-- Sticky Header Bar -->
+        <div class="sticky top-0 bg-slate-900/95 backdrop-blur-xl border-b border-slate-800 p-4 z-20 space-y-2.5 shadow-xl">
+            <div class="flex items-center justify-between">
+                <div>
+                    <span id="scroll-quiz-part" class="text-[11px] font-extrabold text-blue-400 bg-blue-500/10 px-2.5 py-0.5 rounded-full border border-blue-500/30">1-qism (25 ta savol)</span>
+                    <h3 id="scroll-quiz-title" class="font-bold text-sm text-white line-clamp-1 mt-1">Quiz Nomi</h3>
+                </div>
+                <div class="flex items-center space-x-2.5">
+                    <span id="scroll-timer-text" class="text-xs font-mono font-bold text-blue-400 bg-slate-950 px-2.5 py-1 rounded-xl border border-slate-800 flex items-center gap-1 shadow-inner">
+                        <span>⏱️</span>
+                        <span>00:00</span>
+                    </span>
+                    <button onclick="QuizPlayer.exitScrollView()" class="w-8 h-8 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs text-slate-300 hover:text-white font-bold flex items-center justify-center transition">
+                        ✕
+                    </button>
+                </div>
+            </div>
+
+            <!-- Progress line -->
+            <div class="space-y-1">
+                <div class="flex items-center justify-between text-xs text-slate-400 font-medium">
+                    <span id="scroll-progress-text" class="text-blue-300 font-semibold">0 / 25 yechildi</span>
+                    <span class="flex items-center gap-1">
+                        <span>Pastga scroll</span>
+                        <span>⬇️</span>
+                    </span>
+                </div>
+                <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden p-0.5 border border-slate-800">
+                    <div id="scroll-progress-bar" class="bg-gradient-to-r from-blue-500 to-cyan-400 h-full rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vertical Continuous Feed -->
+        <div id="scroll-feed-container" class="flex-1 overflow-y-auto p-4 space-y-6 pb-28">
+            <!-- Questions dynamically added here one after another on answer selection -->
+        </div>
+    </div>
+
+    <!-- ==================== MODAL: SUBSCRIPTION / FACULTY CODE ==================== -->
+    <div id="modal-subscription" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4">
+        <div class="w-full max-w-sm rounded-3xl bg-slate-900 border border-slate-700/80 p-5 space-y-4 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">🎓</span>
+                    <h3 class="font-extrabold text-sm text-white">Fakultet & Oqim Kodi</h3>
+                </div>
+                <button onclick="App.closeSubscriptionModal()" class="w-7 h-7 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center">✕</button>
+            </div>
+
+            <div class="space-y-3 text-xs">
+                <div>
+                    <label class="block text-slate-300 font-semibold mb-1">🏛️ Universitet</label>
+                    <input id="sub-university" type="text" placeholder="Masalan: TATU"
+                           class="w-full px-3.5 py-2.5 rounded-2xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <div>
+                    <label class="block text-slate-300 font-semibold mb-1">📚 Fakultet</label>
+                    <input id="sub-faculty" type="text" placeholder="Dasturiy injiniring"
+                           class="w-full px-3.5 py-2.5 rounded-2xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-blue-500">
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">🎯 Yo'nalish</label>
+                        <input id="sub-direction" type="text" placeholder="Kompyuter ilmlari"
+                               class="w-full px-3.5 py-2.5 rounded-2xl bg-slate-950 border border-slate-800 text-white focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label class="block text-slate-300 font-semibold mb-1">📅 Kurs</label>
+                        <select id="sub-course" class="w-full px-3.5 py-2.5 rounded-2xl bg-slate-950 border border-slate-800 text-white focus:outline-none">
+                            <option value="1-kurs">1-kurs</option>
+                            <option value="2-kurs">2-kurs</option>
+                            <option value="3-kurs">3-kurs</option>
+                            <option value="4-kurs">4-kurs</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-slate-300 font-bold mb-1 flex items-center gap-1 text-blue-300">
+                        <span>🔑</span>
+                        <span>Unikal Oqim Kodi *</span>
+                    </label>
+                    <input id="sub-code" type="text" placeholder="Masalan: TATU-CS-200"
+                           class="w-full px-3.5 py-2.5 rounded-2xl bg-slate-950 border border-blue-500/50 text-blue-400 font-mono font-black uppercase text-sm focus:outline-none focus:border-blue-400">
+                    <p class="text-[11px] text-slate-400 mt-1">Ushbu kod 1 marta saqlanadi va testlaringiz doim chiqib turadi.</p>
+                </div>
+            </div>
+
+            <div class="flex gap-2 pt-2">
+                <button onclick="App.closeSubscriptionModal()" class="flex-1 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-bold transition">
+                    Bekor qilish
+                </button>
+                <button onclick="App.saveSubscription()" class="flex-1 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-black shadow-lg shadow-blue-600/30 transition active:scale-95">
+                    Saqlash 💾
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL: ADMIN BROADCAST ==================== -->
+    <div id="modal-broadcast" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4">
+        <div class="w-full max-w-sm rounded-3xl bg-slate-900 border border-slate-700/80 p-5 space-y-4 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-xl">📢</span>
+                    <h3 class="font-extrabold text-sm text-white">Xabar Tarqatish</h3>
+                </div>
+                <button onclick="AdminPanel.closeBroadcastModal()" class="w-7 h-7 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center">✕</button>
+            </div>
+            <div>
+                <label class="block text-xs font-semibold text-slate-300 mb-1">Barcha bot a'zolariga yuboriladigan e'lon:</label>
+                <textarea id="broadcast-message-input" rows="4" placeholder="E'lon matnini kiriting..."
+                          class="w-full px-3.5 py-2.5 rounded-2xl bg-slate-950 border border-slate-800 text-xs text-white focus:outline-none focus:border-blue-500"></textarea>
+            </div>
+            <div class="flex gap-2">
+                <button onclick="AdminPanel.closeBroadcastModal()" class="flex-1 py-3 rounded-2xl bg-slate-800 text-slate-300 text-xs font-bold">
+                    Bekor qilish
+                </button>
+                <button id="broadcast-send-btn" onclick="AdminPanel.sendBroadcast()" class="flex-1 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-xs font-black shadow-lg shadow-blue-600/30">
+                    Yuborish 🚀
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== BOTTOM FLOATING DOCK ==================== -->
+    <nav class="fixed bottom-0 inset-x-0 bg-slate-950/90 backdrop-blur-2xl border-t border-slate-800/80 z-40 max-w-lg mx-auto">
+        <div class="grid grid-cols-5 h-18 items-center px-2 py-1">
+            <button id="nav-home" onclick="App.switchTab('home')" class="nav-btn flex flex-col items-center justify-center text-blue-500 font-extrabold transition group py-1">
+                <span class="text-xl group-hover:scale-110 transition">🏠</span>
+                <span class="text-[11px] mt-0.5 tracking-tight">Asosiy</span>
+            </button>
+
+            <button id="nav-create" onclick="App.switchTab('create')" class="nav-btn flex flex-col items-center justify-center text-slate-400 font-medium transition group py-1">
+                <span class="text-xl group-hover:scale-110 transition">📁</span>
+                <span class="text-[11px] mt-0.5 tracking-tight">Yuklash</span>
+            </button>
+
+            <button id="nav-stats" onclick="App.switchTab('stats')" class="nav-btn flex flex-col items-center justify-center text-slate-400 font-medium transition group py-1">
+                <span class="text-xl group-hover:scale-110 transition">📊</span>
+                <span class="text-[11px] mt-0.5 tracking-tight">Statistika</span>
+            </button>
+
+            <button id="nav-myquizzes" onclick="App.switchTab('myquizzes')" class="nav-btn flex flex-col items-center justify-center text-slate-400 font-medium transition group py-1">
+                <span class="text-xl group-hover:scale-110 transition">📑</span>
+                <span class="text-[11px] mt-0.5 tracking-tight">Quizlarim</span>
+            </button>
+
+            <button id="nav-admin" onclick="App.switchTab('admin')" class="nav-btn hidden flex flex-col items-center justify-center text-slate-400 font-medium transition group py-1">
+                <span class="text-xl group-hover:scale-110 transition">👑</span>
+                <span class="text-[11px] mt-0.5 tracking-tight">Admin</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== MODAL: ADMIN 4-DIGIT PIN CODE ==================== -->
+    <div id="modal-admin-pin" class="hidden fixed inset-0 bg-black/85 backdrop-blur-xl z-50 flex items-center justify-center p-4">
+        <div class="w-full max-w-xs rounded-3xl bg-slate-900 border border-slate-700/80 p-6 flex flex-col items-center shadow-2xl space-y-4">
+            <!-- Shield Sticker Icon -->
+            <div class="w-16 h-16 rounded-3xl bg-gradient-to-tr from-blue-600/30 to-indigo-600/20 border border-blue-500/40 flex items-center justify-center text-3xl shadow-xl float-bob">
+                🔐
+            </div>
+
+            <div class="text-center space-y-1">
+                <h3 class="font-black text-base text-white tracking-tight">Admin PIN Kod</h3>
+                <p class="text-xs text-slate-400 font-medium">4 xonali maxfiy kodni tering</p>
+            </div>
+
+            <!-- 4 Dot Indicators -->
+            <div class="flex items-center justify-center gap-3.5 my-2">
+                <span id="pin-dot-1" class="w-4 h-4 rounded-full border-2 border-slate-600 bg-transparent transition-all duration-150"></span>
+                <span id="pin-dot-2" class="w-4 h-4 rounded-full border-2 border-slate-600 bg-transparent transition-all duration-150"></span>
+                <span id="pin-dot-3" class="w-4 h-4 rounded-full border-2 border-slate-600 bg-transparent transition-all duration-150"></span>
+                <span id="pin-dot-4" class="w-4 h-4 rounded-full border-2 border-slate-600 bg-transparent transition-all duration-150"></span>
+            </div>
+
+            <!-- Error msg -->
+            <p id="pin-error-msg" class="text-xs text-rose-400 font-bold min-h-[18px] text-center"></p>
+
+            <!-- Numeric Keyboard (Faqat raqamlar) -->
+            <div class="grid grid-cols-3 gap-3 w-full max-w-[240px] pt-1">
+                <button type="button" onclick="AdminPanel.pressKey(1)" class="w-16 h-16 rounded-2xl bg-slate-800/80 hover:bg-slate-700 active:scale-95 text-white font-extrabold text-xl shadow-md border border-slate-700/60 flex items-center justify-center transition">1</button>
+                <button type="button" onclick="AdminPanel.pressKey(2)" class="w-16 h-16 rounded-2xl bg-slate-800/80 hover:bg-slate-700 active:scale-95 text-white font-extrabold text-xl shadow-md border border-slate-700/60 flex items-center justify-center transition">2</button>
+                <button type="button" onclick="AdminPanel.pressKey(3)" class="w-16 h-16 rounded-2xl bg-slate-800/80 hover:bg-slate-700 active:scale-95 text-white font-extrabold text-xl shadow-md border border-slate-700/60 flex items-center justify-center transition">3</button>
+
+                <button type="button" onclick="AdminPanel.pressKey(4)" class="w-16 h-16 rounded-2xl bg-slate-800/80 hover:bg-slate-700 active:scale-95 text-white font-extrabold text-xl shadow-md border border-slate-700/60 flex items-center justify-center transition">4</button>
+                <button type="button" onclick="AdminPanel.pressKey(5)" class="w-16 h-16 rounded-2xl bg-slate-800/80 hover:bg-slate-700 active:scale-95 text-white font-extrabold text-xl shadow-md border border-slate-700/60 flex items-center justify-center transition">5</button>
+                <button type="button" onclick="AdminPanel.pressKey(6)" class="w-16 h-16 rounded-2xl bg-slate-800/80 hover:bg-slate-700 active:scale-95 text-white font-extrabold text-xl shadow-md border border-slate-700/60 flex items-center justify-center transition">6</button>
+
+                <button type="button" onclick="AdminPanel.pressKey(7)" class="w-16 h-16 rounded-2xl bg-slate-800/80 hover:bg-slate-700 active:scale-95 text-white font-extrabold text-xl shadow-md border border-slate-700/60 flex items-center justify-center transition">7</button>
+                <button type="button" onclick="AdminPanel.pressKey(8)" class="w-16 h-16 rounded-2xl bg-slate-800/80 hover:bg-slate-700 active:scale-95 text-white font-extrabold text-xl shadow-md border border-slate-700/60 flex items-center justify-center transition">8</button>
+                <button type="button" onclick="AdminPanel.pressKey(9)" class="w-16 h-16 rounded-2xl bg-slate-800/80 hover:bg-slate-700 active:scale-95 text-white font-extrabold text-xl shadow-md border border-slate-700/60 flex items-center justify-center transition">9</button>
+
+                <button type="button" onclick="AdminPanel.clearKey()" class="w-16 h-16 rounded-2xl bg-slate-900 hover:bg-slate-800 active:scale-95 text-slate-400 font-bold text-xs flex items-center justify-center transition border border-slate-800">C</button>
+                <button type="button" onclick="AdminPanel.pressKey(0)" class="w-16 h-16 rounded-2xl bg-slate-800/80 hover:bg-slate-700 active:scale-95 text-white font-extrabold text-xl shadow-md border border-slate-700/60 flex items-center justify-center transition">0</button>
+                <button type="button" onclick="AdminPanel.deleteKey()" class="w-16 h-16 rounded-2xl bg-slate-900 hover:bg-slate-800 active:scale-95 text-rose-400 font-extrabold text-lg flex items-center justify-center transition border border-slate-800">⌫</button>
+            </div>
+
+            <button type="button" onclick="AdminPanel.closePinModal()" class="text-xs text-slate-400 hover:text-white pt-2 font-semibold">
+                Bekor qilish
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/telegram.js"></script>
+    <script src="/static/js/quiz.js"></script>
+    <script src="/static/js/stats.js"></script>
+    <script src="/static/js/admin.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

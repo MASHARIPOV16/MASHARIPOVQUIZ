@@ -1,0 +1,1613 @@
+﻿{
+    "faculty":  "Dasturiy injiniring",
+    "course":  "2-kurs",
+    "description":  "To\u0027liq testlar bazasi: 25 talik 8 ta qismga ajratilgan",
+    "creator_id":  999999,
+    "questions":  [
+                      {
+                          "option_b":  "Xotira hajmini",
+                          "option_a":  "Elementlar sonini",
+                          "correct_option":  "A",
+                          "option_c":  "Fayl o\u0027lchamini",
+                          "option_d":  "Oxirgi indeksni",
+                          "question_text":  "[1] Python-da \u0027len()\u0027 funksiyasi nima qaytaradi?"
+                      },
+                      {
+                          "option_b":  "UNION",
+                          "option_a":  "JOIN",
+                          "correct_option":  "A",
+                          "option_c":  "MERGE",
+                          "option_d":  "CONNECT",
+                          "question_text":  "[2] SQL-da jadvallarni birlashtirish uchun qaysi kalit so\u0027z ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "Mutable",
+                          "option_a":  "Immutable",
+                          "correct_option":  "A",
+                          "option_c":  "Dynamic",
+                          "option_d":  "Static",
+                          "question_text":  "[3] O\u0027zgarmas ma\u0027lumotlar tuzilmasi nima deyiladi?"
+                      },
+                      {
+                          "option_b":  "Tezroq ishlashi",
+                          "option_a":  "Ma\u0027lumotlar yetkazilishiga kafolat berishi",
+                          "correct_option":  "A",
+                          "option_c":  "Kichikroq paketlar ishlatishi",
+                          "option_d":  "Faqat matn uzatishi",
+                          "question_text":  "[4] TCP protokolining UDP dan asosiy farqi nima?"
+                      },
+                      {
+                          "option_b":  "\u003clink\u003e",
+                          "option_a":  "\u003ca\u003e",
+                          "correct_option":  "A",
+                          "option_c":  "\u003chref\u003e",
+                          "option_d":  "\u003curl\u003e",
+                          "question_text":  "[5] HTML-da giperhavola yaratish tegi qaysi?"
+                      },
+                      {
+                          "option_b":  "margin",
+                          "option_a":  "padding",
+                          "correct_option":  "A",
+                          "option_c":  "border",
+                          "option_d":  "spacing",
+                          "question_text":  "[6] CSS-da elementning ichki masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "padding",
+                          "option_a":  "margin",
+                          "correct_option":  "A",
+                          "option_c":  "outline",
+                          "option_d":  "gap",
+                          "question_text":  "[7] CSS-da elementning tashqi masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "git fetch",
+                          "option_a":  "git pull",
+                          "correct_option":  "A",
+                          "option_c":  "git commit",
+                          "option_d":  "git push",
+                          "question_text":  "[8] Git-da oxirgi o\u0027zgarishlarni serverdan yuklab olish buyrug\u0027i qaysi?"
+                      },
+                      {
+                          "option_b":  "size",
+                          "option_a":  "length",
+                          "correct_option":  "A",
+                          "option_c":  "count",
+                          "option_d":  "index",
+                          "question_text":  "[9] JavaScript-da massiv uzunligini qaysi xususiyat beradi?"
+                      },
+                      {
+                          "option_b":  "Dasturni qatorma-qator bajarish",
+                          "option_a":  "Dastur kodini mashina kodiga aylantirish",
+                          "correct_option":  "A",
+                          "option_c":  "Xatoliklarni tuzatish",
+                          "option_d":  "Grafik chizish",
+                          "question_text":  "[10] Kompilyatorning vazifasi nima?"
+                      },
+                      {
+                          "option_b":  "Faqat mashina kodini saqlaydi",
+                          "option_a":  "Dasturni qatorma-qator o\u0027qib bajaradi",
+                          "correct_option":  "A",
+                          "option_c":  "Faylni arxivlaydi",
+                          "option_d":  "Tarmoqqa ulaydi",
+                          "question_text":  "[11] Interpretator nima qiladi?"
+                      },
+                      {
+                          "option_b":  "Doimiy (Non-volatile)",
+                          "option_a":  "Vaqtinchalik (Volatile)",
+                          "correct_option":  "A",
+                          "option_c":  "Flesh xotira",
+                          "option_d":  "Optik disk",
+                          "question_text":  "[12] RAM (Tezkor xotira) qanday xotira turi?"
+                      },
+                      {
+                          "option_b":  "Narxi juda arzon",
+                          "option_a":  "Tezligi ancha yuqori va harakatlanuvchi qismlari yo\u0027q",
+                          "correct_option":  "A",
+                          "option_c":  "Og\u0027irligi juda og\u0027ir",
+                          "option_d":  "Faqat video saqlaydi",
+                          "question_text":  "[13] SSD disklar HDD dan nima bilan ustun?"
+                      },
+                      {
+                          "option_b":  "Shell",
+                          "option_a":  "Kernel",
+                          "correct_option":  "A",
+                          "option_c":  "Terminal",
+                          "option_d":  "Bash",
+                          "question_text":  "[14] Linux operatsion tizimining o\u0027zagi nima deb ataladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "443",
+                          "correct_option":  "A",
+                          "option_c":  "22",
+                          "option_d":  "8080",
+                          "question_text":  "[15] Qaysi port odatda xavfsiz HTTPS protokoli uchun ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "21",
+                          "option_a":  "22",
+                          "correct_option":  "A",
+                          "option_c":  "25",
+                          "option_d":  "53",
+                          "question_text":  "[16] SSH protokoli qaysi port orqali ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Elektron pochta yuborish uchun",
+                          "option_a":  "Fayllarni uzatish uchun",
+                          "correct_option":  "A",
+                          "option_c":  "Domen qidirish uchun",
+                          "option_d":  "Video ko\u0027rish uchun",
+                          "question_text":  "[17] FTP protokoli nima maqsadda ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "53",
+                          "correct_option":  "A",
+                          "option_c":  "443",
+                          "option_d":  "21",
+                          "question_text":  "[18] DNS server qaysi portda ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Faqat kompyuter dasturi",
+                          "option_a":  "Muammoni hal qilish uchun aniq qadamlar ketma-ketligi",
+                          "correct_option":  "A",
+                          "option_c":  "Matematik formula",
+                          "option_d":  "Matn muharriri",
+                          "question_text":  "[19] Algoritm nima?"
+                      },
+                      {
+                          "option_b":  "Chiziqli vaqt",
+                          "option_a":  "O\u0027zgarmas (konstant) vaqt",
+                          "correct_option":  "A",
+                          "option_c":  "Kvadratik vaqt",
+                          "option_d":  "Logarifmik vaqt",
+                          "question_text":  "[20] Vaqt murakkabligida O(1) nimani anglatadi?"
+                      },
+                      {
+                          "option_b":  "O(1)",
+                          "option_a":  "O(n)",
+                          "correct_option":  "A",
+                          "option_c":  "O(log n)",
+                          "option_d":  "O(n^2)",
+                          "question_text":  "[21] Chiziqli qidiruv (Linear Search) ning vaqt murakkabligi qanday?"
+                      },
+                      {
+                          "option_b":  "O(n)",
+                          "option_a":  "O(n^2)",
+                          "correct_option":  "A",
+                          "option_c":  "O(n log n)",
+                          "option_d":  "O(1)",
+                          "question_text":  "[22] Bubble Sort (Pufaksimon saralash) ning eng yomon holatdagi murakkabligi?"
+                      },
+                      {
+                          "option_b":  "Dinamik dasturlash",
+                          "option_a":  "Bo\u0027lib ol va hukmronlik qil (Divide and Conquer)",
+                          "correct_option":  "A",
+                          "option_c":  "Ochko\u0027z algoritm (Greedy)",
+                          "option_d":  "Tasodifiy algoritm",
+                          "question_text":  "[23] Merge Sort qaysi paradigma asosida ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Kruskal algoritmi",
+                          "option_a":  "Dijkstra algoritmi",
+                          "correct_option":  "A",
+                          "option_c":  "Prim algoritmi",
+                          "option_d":  "DFS",
+                          "question_text":  "[24] Grafda eng qisqa yo\u0027lni topish algoritmi qaysi?"
+                      },
+                      {
+                          "option_b":  "3 ta",
+                          "option_a":  "2 ta",
+                          "correct_option":  "A",
+                          "option_c":  "1 ta",
+                          "option_d":  "Cheksiz",
+                          "question_text":  "[25] Binar daraxtda har bir tugunning ko\u0027pi bilan nechta bolasi bo\u0027lishi mumkin?"
+                      },
+                      {
+                          "option_b":  "Xotira hajmini",
+                          "option_a":  "Elementlar sonini",
+                          "correct_option":  "A",
+                          "option_c":  "Fayl o\u0027lchamini",
+                          "option_d":  "Oxirgi indeksni",
+                          "question_text":  "[26] Python-da \u0027len()\u0027 funksiyasi nima qaytaradi?"
+                      },
+                      {
+                          "option_b":  "UNION",
+                          "option_a":  "JOIN",
+                          "correct_option":  "A",
+                          "option_c":  "MERGE",
+                          "option_d":  "CONNECT",
+                          "question_text":  "[27] SQL-da jadvallarni birlashtirish uchun qaysi kalit so\u0027z ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "Mutable",
+                          "option_a":  "Immutable",
+                          "correct_option":  "A",
+                          "option_c":  "Dynamic",
+                          "option_d":  "Static",
+                          "question_text":  "[28] O\u0027zgarmas ma\u0027lumotlar tuzilmasi nima deyiladi?"
+                      },
+                      {
+                          "option_b":  "Tezroq ishlashi",
+                          "option_a":  "Ma\u0027lumotlar yetkazilishiga kafolat berishi",
+                          "correct_option":  "A",
+                          "option_c":  "Kichikroq paketlar ishlatishi",
+                          "option_d":  "Faqat matn uzatishi",
+                          "question_text":  "[29] TCP protokolining UDP dan asosiy farqi nima?"
+                      },
+                      {
+                          "option_b":  "\u003clink\u003e",
+                          "option_a":  "\u003ca\u003e",
+                          "correct_option":  "A",
+                          "option_c":  "\u003chref\u003e",
+                          "option_d":  "\u003curl\u003e",
+                          "question_text":  "[30] HTML-da giperhavola yaratish tegi qaysi?"
+                      },
+                      {
+                          "option_b":  "margin",
+                          "option_a":  "padding",
+                          "correct_option":  "A",
+                          "option_c":  "border",
+                          "option_d":  "spacing",
+                          "question_text":  "[31] CSS-da elementning ichki masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "padding",
+                          "option_a":  "margin",
+                          "correct_option":  "A",
+                          "option_c":  "outline",
+                          "option_d":  "gap",
+                          "question_text":  "[32] CSS-da elementning tashqi masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "git fetch",
+                          "option_a":  "git pull",
+                          "correct_option":  "A",
+                          "option_c":  "git commit",
+                          "option_d":  "git push",
+                          "question_text":  "[33] Git-da oxirgi o\u0027zgarishlarni serverdan yuklab olish buyrug\u0027i qaysi?"
+                      },
+                      {
+                          "option_b":  "size",
+                          "option_a":  "length",
+                          "correct_option":  "A",
+                          "option_c":  "count",
+                          "option_d":  "index",
+                          "question_text":  "[34] JavaScript-da massiv uzunligini qaysi xususiyat beradi?"
+                      },
+                      {
+                          "option_b":  "Dasturni qatorma-qator bajarish",
+                          "option_a":  "Dastur kodini mashina kodiga aylantirish",
+                          "correct_option":  "A",
+                          "option_c":  "Xatoliklarni tuzatish",
+                          "option_d":  "Grafik chizish",
+                          "question_text":  "[35] Kompilyatorning vazifasi nima?"
+                      },
+                      {
+                          "option_b":  "Faqat mashina kodini saqlaydi",
+                          "option_a":  "Dasturni qatorma-qator o\u0027qib bajaradi",
+                          "correct_option":  "A",
+                          "option_c":  "Faylni arxivlaydi",
+                          "option_d":  "Tarmoqqa ulaydi",
+                          "question_text":  "[36] Interpretator nima qiladi?"
+                      },
+                      {
+                          "option_b":  "Doimiy (Non-volatile)",
+                          "option_a":  "Vaqtinchalik (Volatile)",
+                          "correct_option":  "A",
+                          "option_c":  "Flesh xotira",
+                          "option_d":  "Optik disk",
+                          "question_text":  "[37] RAM (Tezkor xotira) qanday xotira turi?"
+                      },
+                      {
+                          "option_b":  "Narxi juda arzon",
+                          "option_a":  "Tezligi ancha yuqori va harakatlanuvchi qismlari yo\u0027q",
+                          "correct_option":  "A",
+                          "option_c":  "Og\u0027irligi juda og\u0027ir",
+                          "option_d":  "Faqat video saqlaydi",
+                          "question_text":  "[38] SSD disklar HDD dan nima bilan ustun?"
+                      },
+                      {
+                          "option_b":  "Shell",
+                          "option_a":  "Kernel",
+                          "correct_option":  "A",
+                          "option_c":  "Terminal",
+                          "option_d":  "Bash",
+                          "question_text":  "[39] Linux operatsion tizimining o\u0027zagi nima deb ataladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "443",
+                          "correct_option":  "A",
+                          "option_c":  "22",
+                          "option_d":  "8080",
+                          "question_text":  "[40] Qaysi port odatda xavfsiz HTTPS protokoli uchun ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "21",
+                          "option_a":  "22",
+                          "correct_option":  "A",
+                          "option_c":  "25",
+                          "option_d":  "53",
+                          "question_text":  "[41] SSH protokoli qaysi port orqali ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Elektron pochta yuborish uchun",
+                          "option_a":  "Fayllarni uzatish uchun",
+                          "correct_option":  "A",
+                          "option_c":  "Domen qidirish uchun",
+                          "option_d":  "Video ko\u0027rish uchun",
+                          "question_text":  "[42] FTP protokoli nima maqsadda ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "53",
+                          "correct_option":  "A",
+                          "option_c":  "443",
+                          "option_d":  "21",
+                          "question_text":  "[43] DNS server qaysi portda ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Faqat kompyuter dasturi",
+                          "option_a":  "Muammoni hal qilish uchun aniq qadamlar ketma-ketligi",
+                          "correct_option":  "A",
+                          "option_c":  "Matematik formula",
+                          "option_d":  "Matn muharriri",
+                          "question_text":  "[44] Algoritm nima?"
+                      },
+                      {
+                          "option_b":  "Chiziqli vaqt",
+                          "option_a":  "O\u0027zgarmas (konstant) vaqt",
+                          "correct_option":  "A",
+                          "option_c":  "Kvadratik vaqt",
+                          "option_d":  "Logarifmik vaqt",
+                          "question_text":  "[45] Vaqt murakkabligida O(1) nimani anglatadi?"
+                      },
+                      {
+                          "option_b":  "O(1)",
+                          "option_a":  "O(n)",
+                          "correct_option":  "A",
+                          "option_c":  "O(log n)",
+                          "option_d":  "O(n^2)",
+                          "question_text":  "[46] Chiziqli qidiruv (Linear Search) ning vaqt murakkabligi qanday?"
+                      },
+                      {
+                          "option_b":  "O(n)",
+                          "option_a":  "O(n^2)",
+                          "correct_option":  "A",
+                          "option_c":  "O(n log n)",
+                          "option_d":  "O(1)",
+                          "question_text":  "[47] Bubble Sort (Pufaksimon saralash) ning eng yomon holatdagi murakkabligi?"
+                      },
+                      {
+                          "option_b":  "Dinamik dasturlash",
+                          "option_a":  "Bo\u0027lib ol va hukmronlik qil (Divide and Conquer)",
+                          "correct_option":  "A",
+                          "option_c":  "Ochko\u0027z algoritm (Greedy)",
+                          "option_d":  "Tasodifiy algoritm",
+                          "question_text":  "[48] Merge Sort qaysi paradigma asosida ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Kruskal algoritmi",
+                          "option_a":  "Dijkstra algoritmi",
+                          "correct_option":  "A",
+                          "option_c":  "Prim algoritmi",
+                          "option_d":  "DFS",
+                          "question_text":  "[49] Grafda eng qisqa yo\u0027lni topish algoritmi qaysi?"
+                      },
+                      {
+                          "option_b":  "3 ta",
+                          "option_a":  "2 ta",
+                          "correct_option":  "A",
+                          "option_c":  "1 ta",
+                          "option_d":  "Cheksiz",
+                          "question_text":  "[50] Binar daraxtda har bir tugunning ko\u0027pi bilan nechta bolasi bo\u0027lishi mumkin?"
+                      },
+                      {
+                          "option_b":  "Xotira hajmini",
+                          "option_a":  "Elementlar sonini",
+                          "correct_option":  "A",
+                          "option_c":  "Fayl o\u0027lchamini",
+                          "option_d":  "Oxirgi indeksni",
+                          "question_text":  "[51] Python-da \u0027len()\u0027 funksiyasi nima qaytaradi?"
+                      },
+                      {
+                          "option_b":  "UNION",
+                          "option_a":  "JOIN",
+                          "correct_option":  "A",
+                          "option_c":  "MERGE",
+                          "option_d":  "CONNECT",
+                          "question_text":  "[52] SQL-da jadvallarni birlashtirish uchun qaysi kalit so\u0027z ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "Mutable",
+                          "option_a":  "Immutable",
+                          "correct_option":  "A",
+                          "option_c":  "Dynamic",
+                          "option_d":  "Static",
+                          "question_text":  "[53] O\u0027zgarmas ma\u0027lumotlar tuzilmasi nima deyiladi?"
+                      },
+                      {
+                          "option_b":  "Tezroq ishlashi",
+                          "option_a":  "Ma\u0027lumotlar yetkazilishiga kafolat berishi",
+                          "correct_option":  "A",
+                          "option_c":  "Kichikroq paketlar ishlatishi",
+                          "option_d":  "Faqat matn uzatishi",
+                          "question_text":  "[54] TCP protokolining UDP dan asosiy farqi nima?"
+                      },
+                      {
+                          "option_b":  "\u003clink\u003e",
+                          "option_a":  "\u003ca\u003e",
+                          "correct_option":  "A",
+                          "option_c":  "\u003chref\u003e",
+                          "option_d":  "\u003curl\u003e",
+                          "question_text":  "[55] HTML-da giperhavola yaratish tegi qaysi?"
+                      },
+                      {
+                          "option_b":  "margin",
+                          "option_a":  "padding",
+                          "correct_option":  "A",
+                          "option_c":  "border",
+                          "option_d":  "spacing",
+                          "question_text":  "[56] CSS-da elementning ichki masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "padding",
+                          "option_a":  "margin",
+                          "correct_option":  "A",
+                          "option_c":  "outline",
+                          "option_d":  "gap",
+                          "question_text":  "[57] CSS-da elementning tashqi masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "git fetch",
+                          "option_a":  "git pull",
+                          "correct_option":  "A",
+                          "option_c":  "git commit",
+                          "option_d":  "git push",
+                          "question_text":  "[58] Git-da oxirgi o\u0027zgarishlarni serverdan yuklab olish buyrug\u0027i qaysi?"
+                      },
+                      {
+                          "option_b":  "size",
+                          "option_a":  "length",
+                          "correct_option":  "A",
+                          "option_c":  "count",
+                          "option_d":  "index",
+                          "question_text":  "[59] JavaScript-da massiv uzunligini qaysi xususiyat beradi?"
+                      },
+                      {
+                          "option_b":  "Dasturni qatorma-qator bajarish",
+                          "option_a":  "Dastur kodini mashina kodiga aylantirish",
+                          "correct_option":  "A",
+                          "option_c":  "Xatoliklarni tuzatish",
+                          "option_d":  "Grafik chizish",
+                          "question_text":  "[60] Kompilyatorning vazifasi nima?"
+                      },
+                      {
+                          "option_b":  "Faqat mashina kodini saqlaydi",
+                          "option_a":  "Dasturni qatorma-qator o\u0027qib bajaradi",
+                          "correct_option":  "A",
+                          "option_c":  "Faylni arxivlaydi",
+                          "option_d":  "Tarmoqqa ulaydi",
+                          "question_text":  "[61] Interpretator nima qiladi?"
+                      },
+                      {
+                          "option_b":  "Doimiy (Non-volatile)",
+                          "option_a":  "Vaqtinchalik (Volatile)",
+                          "correct_option":  "A",
+                          "option_c":  "Flesh xotira",
+                          "option_d":  "Optik disk",
+                          "question_text":  "[62] RAM (Tezkor xotira) qanday xotira turi?"
+                      },
+                      {
+                          "option_b":  "Narxi juda arzon",
+                          "option_a":  "Tezligi ancha yuqori va harakatlanuvchi qismlari yo\u0027q",
+                          "correct_option":  "A",
+                          "option_c":  "Og\u0027irligi juda og\u0027ir",
+                          "option_d":  "Faqat video saqlaydi",
+                          "question_text":  "[63] SSD disklar HDD dan nima bilan ustun?"
+                      },
+                      {
+                          "option_b":  "Shell",
+                          "option_a":  "Kernel",
+                          "correct_option":  "A",
+                          "option_c":  "Terminal",
+                          "option_d":  "Bash",
+                          "question_text":  "[64] Linux operatsion tizimining o\u0027zagi nima deb ataladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "443",
+                          "correct_option":  "A",
+                          "option_c":  "22",
+                          "option_d":  "8080",
+                          "question_text":  "[65] Qaysi port odatda xavfsiz HTTPS protokoli uchun ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "21",
+                          "option_a":  "22",
+                          "correct_option":  "A",
+                          "option_c":  "25",
+                          "option_d":  "53",
+                          "question_text":  "[66] SSH protokoli qaysi port orqali ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Elektron pochta yuborish uchun",
+                          "option_a":  "Fayllarni uzatish uchun",
+                          "correct_option":  "A",
+                          "option_c":  "Domen qidirish uchun",
+                          "option_d":  "Video ko\u0027rish uchun",
+                          "question_text":  "[67] FTP protokoli nima maqsadda ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "53",
+                          "correct_option":  "A",
+                          "option_c":  "443",
+                          "option_d":  "21",
+                          "question_text":  "[68] DNS server qaysi portda ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Faqat kompyuter dasturi",
+                          "option_a":  "Muammoni hal qilish uchun aniq qadamlar ketma-ketligi",
+                          "correct_option":  "A",
+                          "option_c":  "Matematik formula",
+                          "option_d":  "Matn muharriri",
+                          "question_text":  "[69] Algoritm nima?"
+                      },
+                      {
+                          "option_b":  "Chiziqli vaqt",
+                          "option_a":  "O\u0027zgarmas (konstant) vaqt",
+                          "correct_option":  "A",
+                          "option_c":  "Kvadratik vaqt",
+                          "option_d":  "Logarifmik vaqt",
+                          "question_text":  "[70] Vaqt murakkabligida O(1) nimani anglatadi?"
+                      },
+                      {
+                          "option_b":  "O(1)",
+                          "option_a":  "O(n)",
+                          "correct_option":  "A",
+                          "option_c":  "O(log n)",
+                          "option_d":  "O(n^2)",
+                          "question_text":  "[71] Chiziqli qidiruv (Linear Search) ning vaqt murakkabligi qanday?"
+                      },
+                      {
+                          "option_b":  "O(n)",
+                          "option_a":  "O(n^2)",
+                          "correct_option":  "A",
+                          "option_c":  "O(n log n)",
+                          "option_d":  "O(1)",
+                          "question_text":  "[72] Bubble Sort (Pufaksimon saralash) ning eng yomon holatdagi murakkabligi?"
+                      },
+                      {
+                          "option_b":  "Dinamik dasturlash",
+                          "option_a":  "Bo\u0027lib ol va hukmronlik qil (Divide and Conquer)",
+                          "correct_option":  "A",
+                          "option_c":  "Ochko\u0027z algoritm (Greedy)",
+                          "option_d":  "Tasodifiy algoritm",
+                          "question_text":  "[73] Merge Sort qaysi paradigma asosida ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Kruskal algoritmi",
+                          "option_a":  "Dijkstra algoritmi",
+                          "correct_option":  "A",
+                          "option_c":  "Prim algoritmi",
+                          "option_d":  "DFS",
+                          "question_text":  "[74] Grafda eng qisqa yo\u0027lni topish algoritmi qaysi?"
+                      },
+                      {
+                          "option_b":  "3 ta",
+                          "option_a":  "2 ta",
+                          "correct_option":  "A",
+                          "option_c":  "1 ta",
+                          "option_d":  "Cheksiz",
+                          "question_text":  "[75] Binar daraxtda har bir tugunning ko\u0027pi bilan nechta bolasi bo\u0027lishi mumkin?"
+                      },
+                      {
+                          "option_b":  "Xotira hajmini",
+                          "option_a":  "Elementlar sonini",
+                          "correct_option":  "A",
+                          "option_c":  "Fayl o\u0027lchamini",
+                          "option_d":  "Oxirgi indeksni",
+                          "question_text":  "[76] Python-da \u0027len()\u0027 funksiyasi nima qaytaradi?"
+                      },
+                      {
+                          "option_b":  "UNION",
+                          "option_a":  "JOIN",
+                          "correct_option":  "A",
+                          "option_c":  "MERGE",
+                          "option_d":  "CONNECT",
+                          "question_text":  "[77] SQL-da jadvallarni birlashtirish uchun qaysi kalit so\u0027z ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "Mutable",
+                          "option_a":  "Immutable",
+                          "correct_option":  "A",
+                          "option_c":  "Dynamic",
+                          "option_d":  "Static",
+                          "question_text":  "[78] O\u0027zgarmas ma\u0027lumotlar tuzilmasi nima deyiladi?"
+                      },
+                      {
+                          "option_b":  "Tezroq ishlashi",
+                          "option_a":  "Ma\u0027lumotlar yetkazilishiga kafolat berishi",
+                          "correct_option":  "A",
+                          "option_c":  "Kichikroq paketlar ishlatishi",
+                          "option_d":  "Faqat matn uzatishi",
+                          "question_text":  "[79] TCP protokolining UDP dan asosiy farqi nima?"
+                      },
+                      {
+                          "option_b":  "\u003clink\u003e",
+                          "option_a":  "\u003ca\u003e",
+                          "correct_option":  "A",
+                          "option_c":  "\u003chref\u003e",
+                          "option_d":  "\u003curl\u003e",
+                          "question_text":  "[80] HTML-da giperhavola yaratish tegi qaysi?"
+                      },
+                      {
+                          "option_b":  "margin",
+                          "option_a":  "padding",
+                          "correct_option":  "A",
+                          "option_c":  "border",
+                          "option_d":  "spacing",
+                          "question_text":  "[81] CSS-da elementning ichki masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "padding",
+                          "option_a":  "margin",
+                          "correct_option":  "A",
+                          "option_c":  "outline",
+                          "option_d":  "gap",
+                          "question_text":  "[82] CSS-da elementning tashqi masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "git fetch",
+                          "option_a":  "git pull",
+                          "correct_option":  "A",
+                          "option_c":  "git commit",
+                          "option_d":  "git push",
+                          "question_text":  "[83] Git-da oxirgi o\u0027zgarishlarni serverdan yuklab olish buyrug\u0027i qaysi?"
+                      },
+                      {
+                          "option_b":  "size",
+                          "option_a":  "length",
+                          "correct_option":  "A",
+                          "option_c":  "count",
+                          "option_d":  "index",
+                          "question_text":  "[84] JavaScript-da massiv uzunligini qaysi xususiyat beradi?"
+                      },
+                      {
+                          "option_b":  "Dasturni qatorma-qator bajarish",
+                          "option_a":  "Dastur kodini mashina kodiga aylantirish",
+                          "correct_option":  "A",
+                          "option_c":  "Xatoliklarni tuzatish",
+                          "option_d":  "Grafik chizish",
+                          "question_text":  "[85] Kompilyatorning vazifasi nima?"
+                      },
+                      {
+                          "option_b":  "Faqat mashina kodini saqlaydi",
+                          "option_a":  "Dasturni qatorma-qator o\u0027qib bajaradi",
+                          "correct_option":  "A",
+                          "option_c":  "Faylni arxivlaydi",
+                          "option_d":  "Tarmoqqa ulaydi",
+                          "question_text":  "[86] Interpretator nima qiladi?"
+                      },
+                      {
+                          "option_b":  "Doimiy (Non-volatile)",
+                          "option_a":  "Vaqtinchalik (Volatile)",
+                          "correct_option":  "A",
+                          "option_c":  "Flesh xotira",
+                          "option_d":  "Optik disk",
+                          "question_text":  "[87] RAM (Tezkor xotira) qanday xotira turi?"
+                      },
+                      {
+                          "option_b":  "Narxi juda arzon",
+                          "option_a":  "Tezligi ancha yuqori va harakatlanuvchi qismlari yo\u0027q",
+                          "correct_option":  "A",
+                          "option_c":  "Og\u0027irligi juda og\u0027ir",
+                          "option_d":  "Faqat video saqlaydi",
+                          "question_text":  "[88] SSD disklar HDD dan nima bilan ustun?"
+                      },
+                      {
+                          "option_b":  "Shell",
+                          "option_a":  "Kernel",
+                          "correct_option":  "A",
+                          "option_c":  "Terminal",
+                          "option_d":  "Bash",
+                          "question_text":  "[89] Linux operatsion tizimining o\u0027zagi nima deb ataladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "443",
+                          "correct_option":  "A",
+                          "option_c":  "22",
+                          "option_d":  "8080",
+                          "question_text":  "[90] Qaysi port odatda xavfsiz HTTPS protokoli uchun ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "21",
+                          "option_a":  "22",
+                          "correct_option":  "A",
+                          "option_c":  "25",
+                          "option_d":  "53",
+                          "question_text":  "[91] SSH protokoli qaysi port orqali ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Elektron pochta yuborish uchun",
+                          "option_a":  "Fayllarni uzatish uchun",
+                          "correct_option":  "A",
+                          "option_c":  "Domen qidirish uchun",
+                          "option_d":  "Video ko\u0027rish uchun",
+                          "question_text":  "[92] FTP protokoli nima maqsadda ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "53",
+                          "correct_option":  "A",
+                          "option_c":  "443",
+                          "option_d":  "21",
+                          "question_text":  "[93] DNS server qaysi portda ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Faqat kompyuter dasturi",
+                          "option_a":  "Muammoni hal qilish uchun aniq qadamlar ketma-ketligi",
+                          "correct_option":  "A",
+                          "option_c":  "Matematik formula",
+                          "option_d":  "Matn muharriri",
+                          "question_text":  "[94] Algoritm nima?"
+                      },
+                      {
+                          "option_b":  "Chiziqli vaqt",
+                          "option_a":  "O\u0027zgarmas (konstant) vaqt",
+                          "correct_option":  "A",
+                          "option_c":  "Kvadratik vaqt",
+                          "option_d":  "Logarifmik vaqt",
+                          "question_text":  "[95] Vaqt murakkabligida O(1) nimani anglatadi?"
+                      },
+                      {
+                          "option_b":  "O(1)",
+                          "option_a":  "O(n)",
+                          "correct_option":  "A",
+                          "option_c":  "O(log n)",
+                          "option_d":  "O(n^2)",
+                          "question_text":  "[96] Chiziqli qidiruv (Linear Search) ning vaqt murakkabligi qanday?"
+                      },
+                      {
+                          "option_b":  "O(n)",
+                          "option_a":  "O(n^2)",
+                          "correct_option":  "A",
+                          "option_c":  "O(n log n)",
+                          "option_d":  "O(1)",
+                          "question_text":  "[97] Bubble Sort (Pufaksimon saralash) ning eng yomon holatdagi murakkabligi?"
+                      },
+                      {
+                          "option_b":  "Dinamik dasturlash",
+                          "option_a":  "Bo\u0027lib ol va hukmronlik qil (Divide and Conquer)",
+                          "correct_option":  "A",
+                          "option_c":  "Ochko\u0027z algoritm (Greedy)",
+                          "option_d":  "Tasodifiy algoritm",
+                          "question_text":  "[98] Merge Sort qaysi paradigma asosida ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Kruskal algoritmi",
+                          "option_a":  "Dijkstra algoritmi",
+                          "correct_option":  "A",
+                          "option_c":  "Prim algoritmi",
+                          "option_d":  "DFS",
+                          "question_text":  "[99] Grafda eng qisqa yo\u0027lni topish algoritmi qaysi?"
+                      },
+                      {
+                          "option_b":  "3 ta",
+                          "option_a":  "2 ta",
+                          "correct_option":  "A",
+                          "option_c":  "1 ta",
+                          "option_d":  "Cheksiz",
+                          "question_text":  "[100] Binar daraxtda har bir tugunning ko\u0027pi bilan nechta bolasi bo\u0027lishi mumkin?"
+                      },
+                      {
+                          "option_b":  "Xotira hajmini",
+                          "option_a":  "Elementlar sonini",
+                          "correct_option":  "A",
+                          "option_c":  "Fayl o\u0027lchamini",
+                          "option_d":  "Oxirgi indeksni",
+                          "question_text":  "[101] Python-da \u0027len()\u0027 funksiyasi nima qaytaradi?"
+                      },
+                      {
+                          "option_b":  "UNION",
+                          "option_a":  "JOIN",
+                          "correct_option":  "A",
+                          "option_c":  "MERGE",
+                          "option_d":  "CONNECT",
+                          "question_text":  "[102] SQL-da jadvallarni birlashtirish uchun qaysi kalit so\u0027z ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "Mutable",
+                          "option_a":  "Immutable",
+                          "correct_option":  "A",
+                          "option_c":  "Dynamic",
+                          "option_d":  "Static",
+                          "question_text":  "[103] O\u0027zgarmas ma\u0027lumotlar tuzilmasi nima deyiladi?"
+                      },
+                      {
+                          "option_b":  "Tezroq ishlashi",
+                          "option_a":  "Ma\u0027lumotlar yetkazilishiga kafolat berishi",
+                          "correct_option":  "A",
+                          "option_c":  "Kichikroq paketlar ishlatishi",
+                          "option_d":  "Faqat matn uzatishi",
+                          "question_text":  "[104] TCP protokolining UDP dan asosiy farqi nima?"
+                      },
+                      {
+                          "option_b":  "\u003clink\u003e",
+                          "option_a":  "\u003ca\u003e",
+                          "correct_option":  "A",
+                          "option_c":  "\u003chref\u003e",
+                          "option_d":  "\u003curl\u003e",
+                          "question_text":  "[105] HTML-da giperhavola yaratish tegi qaysi?"
+                      },
+                      {
+                          "option_b":  "margin",
+                          "option_a":  "padding",
+                          "correct_option":  "A",
+                          "option_c":  "border",
+                          "option_d":  "spacing",
+                          "question_text":  "[106] CSS-da elementning ichki masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "padding",
+                          "option_a":  "margin",
+                          "correct_option":  "A",
+                          "option_c":  "outline",
+                          "option_d":  "gap",
+                          "question_text":  "[107] CSS-da elementning tashqi masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "git fetch",
+                          "option_a":  "git pull",
+                          "correct_option":  "A",
+                          "option_c":  "git commit",
+                          "option_d":  "git push",
+                          "question_text":  "[108] Git-da oxirgi o\u0027zgarishlarni serverdan yuklab olish buyrug\u0027i qaysi?"
+                      },
+                      {
+                          "option_b":  "size",
+                          "option_a":  "length",
+                          "correct_option":  "A",
+                          "option_c":  "count",
+                          "option_d":  "index",
+                          "question_text":  "[109] JavaScript-da massiv uzunligini qaysi xususiyat beradi?"
+                      },
+                      {
+                          "option_b":  "Dasturni qatorma-qator bajarish",
+                          "option_a":  "Dastur kodini mashina kodiga aylantirish",
+                          "correct_option":  "A",
+                          "option_c":  "Xatoliklarni tuzatish",
+                          "option_d":  "Grafik chizish",
+                          "question_text":  "[110] Kompilyatorning vazifasi nima?"
+                      },
+                      {
+                          "option_b":  "Faqat mashina kodini saqlaydi",
+                          "option_a":  "Dasturni qatorma-qator o\u0027qib bajaradi",
+                          "correct_option":  "A",
+                          "option_c":  "Faylni arxivlaydi",
+                          "option_d":  "Tarmoqqa ulaydi",
+                          "question_text":  "[111] Interpretator nima qiladi?"
+                      },
+                      {
+                          "option_b":  "Doimiy (Non-volatile)",
+                          "option_a":  "Vaqtinchalik (Volatile)",
+                          "correct_option":  "A",
+                          "option_c":  "Flesh xotira",
+                          "option_d":  "Optik disk",
+                          "question_text":  "[112] RAM (Tezkor xotira) qanday xotira turi?"
+                      },
+                      {
+                          "option_b":  "Narxi juda arzon",
+                          "option_a":  "Tezligi ancha yuqori va harakatlanuvchi qismlari yo\u0027q",
+                          "correct_option":  "A",
+                          "option_c":  "Og\u0027irligi juda og\u0027ir",
+                          "option_d":  "Faqat video saqlaydi",
+                          "question_text":  "[113] SSD disklar HDD dan nima bilan ustun?"
+                      },
+                      {
+                          "option_b":  "Shell",
+                          "option_a":  "Kernel",
+                          "correct_option":  "A",
+                          "option_c":  "Terminal",
+                          "option_d":  "Bash",
+                          "question_text":  "[114] Linux operatsion tizimining o\u0027zagi nima deb ataladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "443",
+                          "correct_option":  "A",
+                          "option_c":  "22",
+                          "option_d":  "8080",
+                          "question_text":  "[115] Qaysi port odatda xavfsiz HTTPS protokoli uchun ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "21",
+                          "option_a":  "22",
+                          "correct_option":  "A",
+                          "option_c":  "25",
+                          "option_d":  "53",
+                          "question_text":  "[116] SSH protokoli qaysi port orqali ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Elektron pochta yuborish uchun",
+                          "option_a":  "Fayllarni uzatish uchun",
+                          "correct_option":  "A",
+                          "option_c":  "Domen qidirish uchun",
+                          "option_d":  "Video ko\u0027rish uchun",
+                          "question_text":  "[117] FTP protokoli nima maqsadda ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "53",
+                          "correct_option":  "A",
+                          "option_c":  "443",
+                          "option_d":  "21",
+                          "question_text":  "[118] DNS server qaysi portda ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Faqat kompyuter dasturi",
+                          "option_a":  "Muammoni hal qilish uchun aniq qadamlar ketma-ketligi",
+                          "correct_option":  "A",
+                          "option_c":  "Matematik formula",
+                          "option_d":  "Matn muharriri",
+                          "question_text":  "[119] Algoritm nima?"
+                      },
+                      {
+                          "option_b":  "Chiziqli vaqt",
+                          "option_a":  "O\u0027zgarmas (konstant) vaqt",
+                          "correct_option":  "A",
+                          "option_c":  "Kvadratik vaqt",
+                          "option_d":  "Logarifmik vaqt",
+                          "question_text":  "[120] Vaqt murakkabligida O(1) nimani anglatadi?"
+                      },
+                      {
+                          "option_b":  "O(1)",
+                          "option_a":  "O(n)",
+                          "correct_option":  "A",
+                          "option_c":  "O(log n)",
+                          "option_d":  "O(n^2)",
+                          "question_text":  "[121] Chiziqli qidiruv (Linear Search) ning vaqt murakkabligi qanday?"
+                      },
+                      {
+                          "option_b":  "O(n)",
+                          "option_a":  "O(n^2)",
+                          "correct_option":  "A",
+                          "option_c":  "O(n log n)",
+                          "option_d":  "O(1)",
+                          "question_text":  "[122] Bubble Sort (Pufaksimon saralash) ning eng yomon holatdagi murakkabligi?"
+                      },
+                      {
+                          "option_b":  "Dinamik dasturlash",
+                          "option_a":  "Bo\u0027lib ol va hukmronlik qil (Divide and Conquer)",
+                          "correct_option":  "A",
+                          "option_c":  "Ochko\u0027z algoritm (Greedy)",
+                          "option_d":  "Tasodifiy algoritm",
+                          "question_text":  "[123] Merge Sort qaysi paradigma asosida ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Kruskal algoritmi",
+                          "option_a":  "Dijkstra algoritmi",
+                          "correct_option":  "A",
+                          "option_c":  "Prim algoritmi",
+                          "option_d":  "DFS",
+                          "question_text":  "[124] Grafda eng qisqa yo\u0027lni topish algoritmi qaysi?"
+                      },
+                      {
+                          "option_b":  "3 ta",
+                          "option_a":  "2 ta",
+                          "correct_option":  "A",
+                          "option_c":  "1 ta",
+                          "option_d":  "Cheksiz",
+                          "question_text":  "[125] Binar daraxtda har bir tugunning ko\u0027pi bilan nechta bolasi bo\u0027lishi mumkin?"
+                      },
+                      {
+                          "option_b":  "Xotira hajmini",
+                          "option_a":  "Elementlar sonini",
+                          "correct_option":  "A",
+                          "option_c":  "Fayl o\u0027lchamini",
+                          "option_d":  "Oxirgi indeksni",
+                          "question_text":  "[126] Python-da \u0027len()\u0027 funksiyasi nima qaytaradi?"
+                      },
+                      {
+                          "option_b":  "UNION",
+                          "option_a":  "JOIN",
+                          "correct_option":  "A",
+                          "option_c":  "MERGE",
+                          "option_d":  "CONNECT",
+                          "question_text":  "[127] SQL-da jadvallarni birlashtirish uchun qaysi kalit so\u0027z ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "Mutable",
+                          "option_a":  "Immutable",
+                          "correct_option":  "A",
+                          "option_c":  "Dynamic",
+                          "option_d":  "Static",
+                          "question_text":  "[128] O\u0027zgarmas ma\u0027lumotlar tuzilmasi nima deyiladi?"
+                      },
+                      {
+                          "option_b":  "Tezroq ishlashi",
+                          "option_a":  "Ma\u0027lumotlar yetkazilishiga kafolat berishi",
+                          "correct_option":  "A",
+                          "option_c":  "Kichikroq paketlar ishlatishi",
+                          "option_d":  "Faqat matn uzatishi",
+                          "question_text":  "[129] TCP protokolining UDP dan asosiy farqi nima?"
+                      },
+                      {
+                          "option_b":  "\u003clink\u003e",
+                          "option_a":  "\u003ca\u003e",
+                          "correct_option":  "A",
+                          "option_c":  "\u003chref\u003e",
+                          "option_d":  "\u003curl\u003e",
+                          "question_text":  "[130] HTML-da giperhavola yaratish tegi qaysi?"
+                      },
+                      {
+                          "option_b":  "margin",
+                          "option_a":  "padding",
+                          "correct_option":  "A",
+                          "option_c":  "border",
+                          "option_d":  "spacing",
+                          "question_text":  "[131] CSS-da elementning ichki masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "padding",
+                          "option_a":  "margin",
+                          "correct_option":  "A",
+                          "option_c":  "outline",
+                          "option_d":  "gap",
+                          "question_text":  "[132] CSS-da elementning tashqi masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "git fetch",
+                          "option_a":  "git pull",
+                          "correct_option":  "A",
+                          "option_c":  "git commit",
+                          "option_d":  "git push",
+                          "question_text":  "[133] Git-da oxirgi o\u0027zgarishlarni serverdan yuklab olish buyrug\u0027i qaysi?"
+                      },
+                      {
+                          "option_b":  "size",
+                          "option_a":  "length",
+                          "correct_option":  "A",
+                          "option_c":  "count",
+                          "option_d":  "index",
+                          "question_text":  "[134] JavaScript-da massiv uzunligini qaysi xususiyat beradi?"
+                      },
+                      {
+                          "option_b":  "Dasturni qatorma-qator bajarish",
+                          "option_a":  "Dastur kodini mashina kodiga aylantirish",
+                          "correct_option":  "A",
+                          "option_c":  "Xatoliklarni tuzatish",
+                          "option_d":  "Grafik chizish",
+                          "question_text":  "[135] Kompilyatorning vazifasi nima?"
+                      },
+                      {
+                          "option_b":  "Faqat mashina kodini saqlaydi",
+                          "option_a":  "Dasturni qatorma-qator o\u0027qib bajaradi",
+                          "correct_option":  "A",
+                          "option_c":  "Faylni arxivlaydi",
+                          "option_d":  "Tarmoqqa ulaydi",
+                          "question_text":  "[136] Interpretator nima qiladi?"
+                      },
+                      {
+                          "option_b":  "Doimiy (Non-volatile)",
+                          "option_a":  "Vaqtinchalik (Volatile)",
+                          "correct_option":  "A",
+                          "option_c":  "Flesh xotira",
+                          "option_d":  "Optik disk",
+                          "question_text":  "[137] RAM (Tezkor xotira) qanday xotira turi?"
+                      },
+                      {
+                          "option_b":  "Narxi juda arzon",
+                          "option_a":  "Tezligi ancha yuqori va harakatlanuvchi qismlari yo\u0027q",
+                          "correct_option":  "A",
+                          "option_c":  "Og\u0027irligi juda og\u0027ir",
+                          "option_d":  "Faqat video saqlaydi",
+                          "question_text":  "[138] SSD disklar HDD dan nima bilan ustun?"
+                      },
+                      {
+                          "option_b":  "Shell",
+                          "option_a":  "Kernel",
+                          "correct_option":  "A",
+                          "option_c":  "Terminal",
+                          "option_d":  "Bash",
+                          "question_text":  "[139] Linux operatsion tizimining o\u0027zagi nima deb ataladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "443",
+                          "correct_option":  "A",
+                          "option_c":  "22",
+                          "option_d":  "8080",
+                          "question_text":  "[140] Qaysi port odatda xavfsiz HTTPS protokoli uchun ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "21",
+                          "option_a":  "22",
+                          "correct_option":  "A",
+                          "option_c":  "25",
+                          "option_d":  "53",
+                          "question_text":  "[141] SSH protokoli qaysi port orqali ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Elektron pochta yuborish uchun",
+                          "option_a":  "Fayllarni uzatish uchun",
+                          "correct_option":  "A",
+                          "option_c":  "Domen qidirish uchun",
+                          "option_d":  "Video ko\u0027rish uchun",
+                          "question_text":  "[142] FTP protokoli nima maqsadda ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "53",
+                          "correct_option":  "A",
+                          "option_c":  "443",
+                          "option_d":  "21",
+                          "question_text":  "[143] DNS server qaysi portda ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Faqat kompyuter dasturi",
+                          "option_a":  "Muammoni hal qilish uchun aniq qadamlar ketma-ketligi",
+                          "correct_option":  "A",
+                          "option_c":  "Matematik formula",
+                          "option_d":  "Matn muharriri",
+                          "question_text":  "[144] Algoritm nima?"
+                      },
+                      {
+                          "option_b":  "Chiziqli vaqt",
+                          "option_a":  "O\u0027zgarmas (konstant) vaqt",
+                          "correct_option":  "A",
+                          "option_c":  "Kvadratik vaqt",
+                          "option_d":  "Logarifmik vaqt",
+                          "question_text":  "[145] Vaqt murakkabligida O(1) nimani anglatadi?"
+                      },
+                      {
+                          "option_b":  "O(1)",
+                          "option_a":  "O(n)",
+                          "correct_option":  "A",
+                          "option_c":  "O(log n)",
+                          "option_d":  "O(n^2)",
+                          "question_text":  "[146] Chiziqli qidiruv (Linear Search) ning vaqt murakkabligi qanday?"
+                      },
+                      {
+                          "option_b":  "O(n)",
+                          "option_a":  "O(n^2)",
+                          "correct_option":  "A",
+                          "option_c":  "O(n log n)",
+                          "option_d":  "O(1)",
+                          "question_text":  "[147] Bubble Sort (Pufaksimon saralash) ning eng yomon holatdagi murakkabligi?"
+                      },
+                      {
+                          "option_b":  "Dinamik dasturlash",
+                          "option_a":  "Bo\u0027lib ol va hukmronlik qil (Divide and Conquer)",
+                          "correct_option":  "A",
+                          "option_c":  "Ochko\u0027z algoritm (Greedy)",
+                          "option_d":  "Tasodifiy algoritm",
+                          "question_text":  "[148] Merge Sort qaysi paradigma asosida ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Kruskal algoritmi",
+                          "option_a":  "Dijkstra algoritmi",
+                          "correct_option":  "A",
+                          "option_c":  "Prim algoritmi",
+                          "option_d":  "DFS",
+                          "question_text":  "[149] Grafda eng qisqa yo\u0027lni topish algoritmi qaysi?"
+                      },
+                      {
+                          "option_b":  "3 ta",
+                          "option_a":  "2 ta",
+                          "correct_option":  "A",
+                          "option_c":  "1 ta",
+                          "option_d":  "Cheksiz",
+                          "question_text":  "[150] Binar daraxtda har bir tugunning ko\u0027pi bilan nechta bolasi bo\u0027lishi mumkin?"
+                      },
+                      {
+                          "option_b":  "Xotira hajmini",
+                          "option_a":  "Elementlar sonini",
+                          "correct_option":  "A",
+                          "option_c":  "Fayl o\u0027lchamini",
+                          "option_d":  "Oxirgi indeksni",
+                          "question_text":  "[151] Python-da \u0027len()\u0027 funksiyasi nima qaytaradi?"
+                      },
+                      {
+                          "option_b":  "UNION",
+                          "option_a":  "JOIN",
+                          "correct_option":  "A",
+                          "option_c":  "MERGE",
+                          "option_d":  "CONNECT",
+                          "question_text":  "[152] SQL-da jadvallarni birlashtirish uchun qaysi kalit so\u0027z ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "Mutable",
+                          "option_a":  "Immutable",
+                          "correct_option":  "A",
+                          "option_c":  "Dynamic",
+                          "option_d":  "Static",
+                          "question_text":  "[153] O\u0027zgarmas ma\u0027lumotlar tuzilmasi nima deyiladi?"
+                      },
+                      {
+                          "option_b":  "Tezroq ishlashi",
+                          "option_a":  "Ma\u0027lumotlar yetkazilishiga kafolat berishi",
+                          "correct_option":  "A",
+                          "option_c":  "Kichikroq paketlar ishlatishi",
+                          "option_d":  "Faqat matn uzatishi",
+                          "question_text":  "[154] TCP protokolining UDP dan asosiy farqi nima?"
+                      },
+                      {
+                          "option_b":  "\u003clink\u003e",
+                          "option_a":  "\u003ca\u003e",
+                          "correct_option":  "A",
+                          "option_c":  "\u003chref\u003e",
+                          "option_d":  "\u003curl\u003e",
+                          "question_text":  "[155] HTML-da giperhavola yaratish tegi qaysi?"
+                      },
+                      {
+                          "option_b":  "margin",
+                          "option_a":  "padding",
+                          "correct_option":  "A",
+                          "option_c":  "border",
+                          "option_d":  "spacing",
+                          "question_text":  "[156] CSS-da elementning ichki masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "padding",
+                          "option_a":  "margin",
+                          "correct_option":  "A",
+                          "option_c":  "outline",
+                          "option_d":  "gap",
+                          "question_text":  "[157] CSS-da elementning tashqi masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "git fetch",
+                          "option_a":  "git pull",
+                          "correct_option":  "A",
+                          "option_c":  "git commit",
+                          "option_d":  "git push",
+                          "question_text":  "[158] Git-da oxirgi o\u0027zgarishlarni serverdan yuklab olish buyrug\u0027i qaysi?"
+                      },
+                      {
+                          "option_b":  "size",
+                          "option_a":  "length",
+                          "correct_option":  "A",
+                          "option_c":  "count",
+                          "option_d":  "index",
+                          "question_text":  "[159] JavaScript-da massiv uzunligini qaysi xususiyat beradi?"
+                      },
+                      {
+                          "option_b":  "Dasturni qatorma-qator bajarish",
+                          "option_a":  "Dastur kodini mashina kodiga aylantirish",
+                          "correct_option":  "A",
+                          "option_c":  "Xatoliklarni tuzatish",
+                          "option_d":  "Grafik chizish",
+                          "question_text":  "[160] Kompilyatorning vazifasi nima?"
+                      },
+                      {
+                          "option_b":  "Faqat mashina kodini saqlaydi",
+                          "option_a":  "Dasturni qatorma-qator o\u0027qib bajaradi",
+                          "correct_option":  "A",
+                          "option_c":  "Faylni arxivlaydi",
+                          "option_d":  "Tarmoqqa ulaydi",
+                          "question_text":  "[161] Interpretator nima qiladi?"
+                      },
+                      {
+                          "option_b":  "Doimiy (Non-volatile)",
+                          "option_a":  "Vaqtinchalik (Volatile)",
+                          "correct_option":  "A",
+                          "option_c":  "Flesh xotira",
+                          "option_d":  "Optik disk",
+                          "question_text":  "[162] RAM (Tezkor xotira) qanday xotira turi?"
+                      },
+                      {
+                          "option_b":  "Narxi juda arzon",
+                          "option_a":  "Tezligi ancha yuqori va harakatlanuvchi qismlari yo\u0027q",
+                          "correct_option":  "A",
+                          "option_c":  "Og\u0027irligi juda og\u0027ir",
+                          "option_d":  "Faqat video saqlaydi",
+                          "question_text":  "[163] SSD disklar HDD dan nima bilan ustun?"
+                      },
+                      {
+                          "option_b":  "Shell",
+                          "option_a":  "Kernel",
+                          "correct_option":  "A",
+                          "option_c":  "Terminal",
+                          "option_d":  "Bash",
+                          "question_text":  "[164] Linux operatsion tizimining o\u0027zagi nima deb ataladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "443",
+                          "correct_option":  "A",
+                          "option_c":  "22",
+                          "option_d":  "8080",
+                          "question_text":  "[165] Qaysi port odatda xavfsiz HTTPS protokoli uchun ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "21",
+                          "option_a":  "22",
+                          "correct_option":  "A",
+                          "option_c":  "25",
+                          "option_d":  "53",
+                          "question_text":  "[166] SSH protokoli qaysi port orqali ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Elektron pochta yuborish uchun",
+                          "option_a":  "Fayllarni uzatish uchun",
+                          "correct_option":  "A",
+                          "option_c":  "Domen qidirish uchun",
+                          "option_d":  "Video ko\u0027rish uchun",
+                          "question_text":  "[167] FTP protokoli nima maqsadda ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "53",
+                          "correct_option":  "A",
+                          "option_c":  "443",
+                          "option_d":  "21",
+                          "question_text":  "[168] DNS server qaysi portda ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Faqat kompyuter dasturi",
+                          "option_a":  "Muammoni hal qilish uchun aniq qadamlar ketma-ketligi",
+                          "correct_option":  "A",
+                          "option_c":  "Matematik formula",
+                          "option_d":  "Matn muharriri",
+                          "question_text":  "[169] Algoritm nima?"
+                      },
+                      {
+                          "option_b":  "Chiziqli vaqt",
+                          "option_a":  "O\u0027zgarmas (konstant) vaqt",
+                          "correct_option":  "A",
+                          "option_c":  "Kvadratik vaqt",
+                          "option_d":  "Logarifmik vaqt",
+                          "question_text":  "[170] Vaqt murakkabligida O(1) nimani anglatadi?"
+                      },
+                      {
+                          "option_b":  "O(1)",
+                          "option_a":  "O(n)",
+                          "correct_option":  "A",
+                          "option_c":  "O(log n)",
+                          "option_d":  "O(n^2)",
+                          "question_text":  "[171] Chiziqli qidiruv (Linear Search) ning vaqt murakkabligi qanday?"
+                      },
+                      {
+                          "option_b":  "O(n)",
+                          "option_a":  "O(n^2)",
+                          "correct_option":  "A",
+                          "option_c":  "O(n log n)",
+                          "option_d":  "O(1)",
+                          "question_text":  "[172] Bubble Sort (Pufaksimon saralash) ning eng yomon holatdagi murakkabligi?"
+                      },
+                      {
+                          "option_b":  "Dinamik dasturlash",
+                          "option_a":  "Bo\u0027lib ol va hukmronlik qil (Divide and Conquer)",
+                          "correct_option":  "A",
+                          "option_c":  "Ochko\u0027z algoritm (Greedy)",
+                          "option_d":  "Tasodifiy algoritm",
+                          "question_text":  "[173] Merge Sort qaysi paradigma asosida ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Kruskal algoritmi",
+                          "option_a":  "Dijkstra algoritmi",
+                          "correct_option":  "A",
+                          "option_c":  "Prim algoritmi",
+                          "option_d":  "DFS",
+                          "question_text":  "[174] Grafda eng qisqa yo\u0027lni topish algoritmi qaysi?"
+                      },
+                      {
+                          "option_b":  "3 ta",
+                          "option_a":  "2 ta",
+                          "correct_option":  "A",
+                          "option_c":  "1 ta",
+                          "option_d":  "Cheksiz",
+                          "question_text":  "[175] Binar daraxtda har bir tugunning ko\u0027pi bilan nechta bolasi bo\u0027lishi mumkin?"
+                      },
+                      {
+                          "option_b":  "Xotira hajmini",
+                          "option_a":  "Elementlar sonini",
+                          "correct_option":  "A",
+                          "option_c":  "Fayl o\u0027lchamini",
+                          "option_d":  "Oxirgi indeksni",
+                          "question_text":  "[176] Python-da \u0027len()\u0027 funksiyasi nima qaytaradi?"
+                      },
+                      {
+                          "option_b":  "UNION",
+                          "option_a":  "JOIN",
+                          "correct_option":  "A",
+                          "option_c":  "MERGE",
+                          "option_d":  "CONNECT",
+                          "question_text":  "[177] SQL-da jadvallarni birlashtirish uchun qaysi kalit so\u0027z ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "Mutable",
+                          "option_a":  "Immutable",
+                          "correct_option":  "A",
+                          "option_c":  "Dynamic",
+                          "option_d":  "Static",
+                          "question_text":  "[178] O\u0027zgarmas ma\u0027lumotlar tuzilmasi nima deyiladi?"
+                      },
+                      {
+                          "option_b":  "Tezroq ishlashi",
+                          "option_a":  "Ma\u0027lumotlar yetkazilishiga kafolat berishi",
+                          "correct_option":  "A",
+                          "option_c":  "Kichikroq paketlar ishlatishi",
+                          "option_d":  "Faqat matn uzatishi",
+                          "question_text":  "[179] TCP protokolining UDP dan asosiy farqi nima?"
+                      },
+                      {
+                          "option_b":  "\u003clink\u003e",
+                          "option_a":  "\u003ca\u003e",
+                          "correct_option":  "A",
+                          "option_c":  "\u003chref\u003e",
+                          "option_d":  "\u003curl\u003e",
+                          "question_text":  "[180] HTML-da giperhavola yaratish tegi qaysi?"
+                      },
+                      {
+                          "option_b":  "margin",
+                          "option_a":  "padding",
+                          "correct_option":  "A",
+                          "option_c":  "border",
+                          "option_d":  "spacing",
+                          "question_text":  "[181] CSS-da elementning ichki masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "padding",
+                          "option_a":  "margin",
+                          "correct_option":  "A",
+                          "option_c":  "outline",
+                          "option_d":  "gap",
+                          "question_text":  "[182] CSS-da elementning tashqi masofasi qanday belgilanadi?"
+                      },
+                      {
+                          "option_b":  "git fetch",
+                          "option_a":  "git pull",
+                          "correct_option":  "A",
+                          "option_c":  "git commit",
+                          "option_d":  "git push",
+                          "question_text":  "[183] Git-da oxirgi o\u0027zgarishlarni serverdan yuklab olish buyrug\u0027i qaysi?"
+                      },
+                      {
+                          "option_b":  "size",
+                          "option_a":  "length",
+                          "correct_option":  "A",
+                          "option_c":  "count",
+                          "option_d":  "index",
+                          "question_text":  "[184] JavaScript-da massiv uzunligini qaysi xususiyat beradi?"
+                      },
+                      {
+                          "option_b":  "Dasturni qatorma-qator bajarish",
+                          "option_a":  "Dastur kodini mashina kodiga aylantirish",
+                          "correct_option":  "A",
+                          "option_c":  "Xatoliklarni tuzatish",
+                          "option_d":  "Grafik chizish",
+                          "question_text":  "[185] Kompilyatorning vazifasi nima?"
+                      },
+                      {
+                          "option_b":  "Faqat mashina kodini saqlaydi",
+                          "option_a":  "Dasturni qatorma-qator o\u0027qib bajaradi",
+                          "correct_option":  "A",
+                          "option_c":  "Faylni arxivlaydi",
+                          "option_d":  "Tarmoqqa ulaydi",
+                          "question_text":  "[186] Interpretator nima qiladi?"
+                      },
+                      {
+                          "option_b":  "Doimiy (Non-volatile)",
+                          "option_a":  "Vaqtinchalik (Volatile)",
+                          "correct_option":  "A",
+                          "option_c":  "Flesh xotira",
+                          "option_d":  "Optik disk",
+                          "question_text":  "[187] RAM (Tezkor xotira) qanday xotira turi?"
+                      },
+                      {
+                          "option_b":  "Narxi juda arzon",
+                          "option_a":  "Tezligi ancha yuqori va harakatlanuvchi qismlari yo\u0027q",
+                          "correct_option":  "A",
+                          "option_c":  "Og\u0027irligi juda og\u0027ir",
+                          "option_d":  "Faqat video saqlaydi",
+                          "question_text":  "[188] SSD disklar HDD dan nima bilan ustun?"
+                      },
+                      {
+                          "option_b":  "Shell",
+                          "option_a":  "Kernel",
+                          "correct_option":  "A",
+                          "option_c":  "Terminal",
+                          "option_d":  "Bash",
+                          "question_text":  "[189] Linux operatsion tizimining o\u0027zagi nima deb ataladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "443",
+                          "correct_option":  "A",
+                          "option_c":  "22",
+                          "option_d":  "8080",
+                          "question_text":  "[190] Qaysi port odatda xavfsiz HTTPS protokoli uchun ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "21",
+                          "option_a":  "22",
+                          "correct_option":  "A",
+                          "option_c":  "25",
+                          "option_d":  "53",
+                          "question_text":  "[191] SSH protokoli qaysi port orqali ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Elektron pochta yuborish uchun",
+                          "option_a":  "Fayllarni uzatish uchun",
+                          "correct_option":  "A",
+                          "option_c":  "Domen qidirish uchun",
+                          "option_d":  "Video ko\u0027rish uchun",
+                          "question_text":  "[192] FTP protokoli nima maqsadda ishlatiladi?"
+                      },
+                      {
+                          "option_b":  "80",
+                          "option_a":  "53",
+                          "correct_option":  "A",
+                          "option_c":  "443",
+                          "option_d":  "21",
+                          "question_text":  "[193] DNS server qaysi portda ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Faqat kompyuter dasturi",
+                          "option_a":  "Muammoni hal qilish uchun aniq qadamlar ketma-ketligi",
+                          "correct_option":  "A",
+                          "option_c":  "Matematik formula",
+                          "option_d":  "Matn muharriri",
+                          "question_text":  "[194] Algoritm nima?"
+                      },
+                      {
+                          "option_b":  "Chiziqli vaqt",
+                          "option_a":  "O\u0027zgarmas (konstant) vaqt",
+                          "correct_option":  "A",
+                          "option_c":  "Kvadratik vaqt",
+                          "option_d":  "Logarifmik vaqt",
+                          "question_text":  "[195] Vaqt murakkabligida O(1) nimani anglatadi?"
+                      },
+                      {
+                          "option_b":  "O(1)",
+                          "option_a":  "O(n)",
+                          "correct_option":  "A",
+                          "option_c":  "O(log n)",
+                          "option_d":  "O(n^2)",
+                          "question_text":  "[196] Chiziqli qidiruv (Linear Search) ning vaqt murakkabligi qanday?"
+                      },
+                      {
+                          "option_b":  "O(n)",
+                          "option_a":  "O(n^2)",
+                          "correct_option":  "A",
+                          "option_c":  "O(n log n)",
+                          "option_d":  "O(1)",
+                          "question_text":  "[197] Bubble Sort (Pufaksimon saralash) ning eng yomon holatdagi murakkabligi?"
+                      },
+                      {
+                          "option_b":  "Dinamik dasturlash",
+                          "option_a":  "Bo\u0027lib ol va hukmronlik qil (Divide and Conquer)",
+                          "correct_option":  "A",
+                          "option_c":  "Ochko\u0027z algoritm (Greedy)",
+                          "option_d":  "Tasodifiy algoritm",
+                          "question_text":  "[198] Merge Sort qaysi paradigma asosida ishlaydi?"
+                      },
+                      {
+                          "option_b":  "Kruskal algoritmi",
+                          "option_a":  "Dijkstra algoritmi",
+                          "correct_option":  "A",
+                          "option_c":  "Prim algoritmi",
+                          "option_d":  "DFS",
+                          "question_text":  "[199] Grafda eng qisqa yo\u0027lni topish algoritmi qaysi?"
+                      },
+                      {
+                          "option_b":  "3 ta",
+                          "option_a":  "2 ta",
+                          "correct_option":  "A",
+                          "option_c":  "1 ta",
+                          "option_d":  "Cheksiz",
+                          "question_text":  "[200] Binar daraxtda har bir tugunning ko\u0027pi bilan nechta bolasi bo\u0027lishi mumkin?"
+                      }
+                  ],
+    "university":  "TATU",
+    "unique_code":  "TATU-CS-200",
+    "time_limit_per_question":  30,
+    "direction":  "Dasturiy injiniring",
+    "title":  "Kompyuter Ilmlari va Dasturlash (200+ Savol)"
+}

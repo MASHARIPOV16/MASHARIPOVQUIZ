@@ -1,0 +1,72 @@
+[
+  {
+    "question": "Python dasturlash tilida qaysi ma'lumot turi o'zgarmas (immutable) hisoblanadi?",
+    "a": "tuple",
+    "b": "list",
+    "c": "dict",
+    "d": "set"
+  },
+  {
+    "question": "Algoritmlarda 'Binary Search' ning eng yomon holatdagi vaqt murakkabligi qanday?",
+    "a": "O(log n)",
+    "b": "O(n)",
+    "c": "O(n^2)",
+    "d": "O(1)"
+  },
+  {
+    "question": "Python-da generator funksiya yaratish uchun qaysi kalit so'z ishlatiladi?",
+    "a": "yield",
+    "b": "return",
+    "c": "generate",
+    "d": "async"
+  },
+  {
+    "question": "LIFO (Last In First Out) prinsipi asosida ishlaydigan ma'lumotlar tuzilmasi qaysi?",
+    "a": "Stack",
+    "b": "Queue",
+    "c": "Linked List",
+    "d": "Tree"
+  },
+  {
+    "question": "FastAPI freymvorki qaysi asinxron server orqali ishga tushiriladi?",
+    "a": "Uvicorn",
+    "b": "Apache",
+    "c": "Nginx Native",
+    "d": "Tomcat"
+  },
+  {
+    "question": "Relatsion ma'lumotlar bazasida jadvalning asosiy kaliti qanday ataladi?",
+    "a": "Primary Key",
+    "b": "Foreign Key",
+    "c": "Unique Index",
+    "d": "Composite Key"
+  },
+  {
+    "question": "HTTP protokolida resursni muvaffaqiyatli olish kodi qaysi?",
+    "a": "200 OK",
+    "b": "201 Created",
+    "c": "404 Not Found",
+    "d": "500 Server Error"
+  },
+  {
+    "question": "Git versiya nazorat tizimida yangi tarmoq (branch) yaratish buyrug'i qaysi?",
+    "a": "git branch <nomi>",
+    "b": "git push",
+    "c": "git clone",
+    "d": "git init"
+  },
+  {
+    "question": "JavaScript-da o'zgarmas o'zgaruvchi e'lon qilish uchun qaysi kalit so'z ishlatiladi?",
+    "a": "const",
+    "b": "var",
+    "c": "let",
+    "d": "static"
+  },
+  {
+    "question": "Dasturlashda OOP ning 4 ta asosiy ustunidan biri qaysi?",
+    "a": "Inkapsulyatsiya",
+    "b": "Kompilyatsiya",
+    "c": "Iteratsiya",
+    "d": "Rekursiya"
+  }
+]
